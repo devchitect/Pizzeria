@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+</head>
+
+<body>
+
+    <section class="signUp-box">
+        <form id="su-form-box" action="#/!" method="get" ng-controller="signUpController" name="signUpForm">
+            <h1 class="signUp-title">SIGN UP</h1>
+
+            <h3 class="signUp-intro">Many membership special events are awaiting. <br>
+                Join us now and start earning reward points from today !
+            </h3>
+
+            <div class="su-box" >
+                <div class="su-left">
+
+                    <div class="su-email">
+                        <div class="su-field">
+                            <label for="email-su">Email</label>
+                            <input type="email" name="email" id="email-su" required autocomplete="off" class="su-input" ng-model="email">
+                            <small class="error error-email"></small>
+                            <small class="error" ng-show="signUpForm.email.$touched && signUpForm.email.$invalid">Your email is required in valid form.</small>
+                        </div>
+                    </div>
+
+                    <div class="su-name">
+                        <div class="su-field">
+                            <label for="name">Fullname</label>
+                            <input type="text" name="name" id="name" ng-model="name" required>
+                            <small class="error" ng-show="signUpForm.name.$touched && signUpForm.name.$invalid">Please enter your name.</small>
+                        </div>
+                    </div>
+
+                    <div class="gender-birth">
+                        <div class="su-birthdate">
+                            <div class="su-field">
+                                <label for="birthdate">Birthdate</label>
+                                <input type="date" name="birthdate" id="birthdate" required ng-model="birthdate">
+                                <small class="error" ng-show="signUpForm.birthdate.$touched && signUpForm.birthdate.$invalid">Surprise awaits you on your day.</small>
+                            </div>
+                        </div>
+
+                        <div class="su-gender">
+                            <div class="su-field">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender" ng-model="gender" required>
+                                    <option disabled selected></option>
+                                    <option value="Male" >Male</option>
+                                    <option value="Female" >Female</option>
+                                </select>
+                                <small class="error" ng-show="signUpForm.gender.$touched && signUpForm.gender.$invalid">What should we call you, Sir/Madam?</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="su-address">
+                        <div class="su-field">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" class="su-input" ng-model="address">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="su-right">
+                    <div class="su-phone">
+                        <div class="su-field">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phoneNumber" id="phone" required class="su-input" ng-model="phoneNumber">
+                        </div>
+                        <small class="error error-phone"></small>
+                        <small class="error" ng-show="signUpForm.phoneNumber.$touched && signUpForm.phoneNumber.$invalid">This is required.</small>
+                    </div>
+
+                    <div class="password-su">
+                        <div class="su-field">
+                            <label for="password-su">Password</label>
+                            <input type="password" name="pass1"  id="password-su" required ng-model="pass1" class="su-input">
+                            <i class="bi bi-eye-slash-fill sushow1" ng-click="showPassSu1()"></i>
+                        </div>
+                        <small class="error error-pass1"></small>
+                        <small class="error" ng-show="signUpForm.pass1.$touched && signUpForm.pass1.$invalid">This is required.</small>
+                    </div>
+
+                    <div class="password-su">
+                        <div class="su-field">
+                            <label for="password2-su">Re-Enter Password</label>
+                            <input type="password" name="pass2"  id="password2-su" required ng-model="pass2" class="su-input">
+                            <i class="bi bi-eye-slash-fill sushow2" ng-click="showPassSu2()"></i>
+                        </div>
+                        <small class="error error-pass2"></small>
+                        <small class="error" ng-show="signUpForm.pass2.$touched && signUpForm.pass2.$invalid">Re-enter your password correctly.</small>
+                    </div>
+
+                    <div class="pass-remind">
+                        <h4>For security, <span>password</span> must at least 8 character and meet 4 condition following:</h4>
+                        <ul>
+                            <li>Numbers (0-9). </li>
+                            <li>Lowercase/small letters (a-z). </li>
+                            <li>Uppercase/capital letters (A-Z). </li>
+                            <li>Special characters (like !@#$)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="accept-term">
+                <input type="checkbox" name="" id="su-accept" required >
+                <label for="su-accept">I agree to join Casanova Pizzeria's Membership and accept
+                <a href="#!policy">the terms, conditions and privacy policy of Shale Pizza Co.</a></label>
+            </div>
+
+            <button id="su-submit" class="su-submit" type="submit" ng-click="createFakeData()">Sign Up</button>
+        </form>
+    </section>
+
+</body>
+</html>

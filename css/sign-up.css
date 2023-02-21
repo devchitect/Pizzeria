@@ -1,0 +1,177 @@
+.signUp-box{
+    margin: 0 auto;
+    padding: 90px 0;
+    background: url("../images/background/gray-marble-textured-background.jpg");
+    background-size: 20%;
+
+}
+
+.signUp-title{
+    text-align: center;
+    color: var(--sidered);
+    font-family: Inter-ExtraBold, sans-serif;
+}
+#su-form-box{
+    margin: 0 15%;
+    padding: 30px 50px;
+    border: 5px double darkgray; border-radius: 10px;
+    background: #ffffff;
+}
+
+.signUp-intro{
+    text-align: center;
+    margin: 15px 25px 25px;
+    font-weight: normal;
+}
+.su-box{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+}
+.gender-birth{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    justify-content: space-between;
+}
+
+.su-field{
+    position: relative;
+    margin: 13px 0 5px;
+    width: 100%;
+}
+.su-field label{
+    margin-bottom: 3px;
+    padding-left: 5px ;
+    display: block;
+    font-weight: bold;
+
+}
+.su-field label:after{
+    content: " *";
+    color: var(--sidered);
+}
+.su-address .su-field label:after{
+    content: " (Optional)";
+    color: #3c3c3c;
+}
+
+
+.su-field i{
+    position: absolute;
+    top: 49%;
+    right: 3%;
+}
+
+.su-left input,.su-left select,.su-left input[type = "date"], .su-right input{
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid #bcbcbc;
+}
+.su-left input:focus,.su-left select:focus,.su-left input[type = "date"]:focus, .su-right input:focus{
+    border: 1px solid transparent;
+    outline: 2px solid var(--strongorange);
+}
+.su-field:hover label{
+    color: red;
+
+}
+.password-su input{
+    padding: 10px 50px 10px 10px;
+}
+
+.sushow1,.sushow2{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pass-remind{
+    margin-top: 20px;
+    list-style-position: inside;
+}
+.pass-remind h4{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.pass-remind li{
+    font-size: 0.9rem;
+    line-height: 140%;
+}
+
+.accept-term{
+    margin-top: 25px;
+}
+.accept-term input[type="checkbox"]{
+    width: 16px; height: 16px;
+    margin-right: 6px;
+}
+.accept-term a{
+    color: var(--sidered);
+}
+
+.su-submit{
+    display: block;
+    margin: 35px  auto 0;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px; border: 1px solid var(--sidered);
+    color: white;
+    background: var(--sidered);
+    cursor: pointer;
+}
+.su-submit:hover{
+    color: var(--darkred);
+    text-shadow: 2px 1px 1px rgba(142, 21, 4, 0.5);
+    background: var(--lightorange);
+    border: 1px solid var(--lightorange);
+}
+.su-submit:active{
+    transform: scale(1.03);
+}
+.su-submit a{
+    color: inherit;
+    text-decoration: inherit;
+}
+.error{
+    color: var(--sidered);
+}
+
+@media screen and (max-width: 1200px){
+    #su-form-box{
+        margin: 0 6%;
+    }
+    .su-box{
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .signUp-intro{
+        font-size: 15px;
+        line-height: 150%;
+    }
+    #su-form-box{
+        padding: 30px 25px;
+        font-size: 15px !important;
+    }
+    .su-field label{
+        font-size: 14px;
+    }
+    .su-field i{
+        font-size: 15px;
+    }
+    .su-left input,.su-left select,.su-left input[type = "date"], .su-right input{
+        font-size: 15px;
+        padding: 5px;
+    }
+    .gender-birth{
+        grid-template-columns: 100%;
+    }
+    .pass-remind{
+        font-size: 14px;
+    }
+}

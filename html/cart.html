@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cart</title>
+
+</head>
+<body>
+<div class="cart-wrapper">
+
+    <div class="progress-bar">
+        <div id="now-cart">
+            <div>1</div>
+            <div class="text-active">Cart</div>
+        </div>
+
+        <div class="bi bi-chevron-double-right"></div>
+
+        <div id="now-checkout">
+            <div class="bg-unactive">2</div>
+            <div>Checkout</div>
+        </div>
+
+        <div class="bi bi-chevron-double-right"></div>
+
+        <div id="order-completed">
+            <div class="bg-unactive">3</div>
+            <div>Complete</div>
+        </div>
+    </div>
+
+    <div class="empty">
+        <h2>Your cart is currently empty.</h2>
+        <a href="#!menu">Continue Shopping</a>
+    </div>
+
+
+    <div class="cart-box dp-none">
+        <div>
+            <a href="#!menu" class="shopping-more" ng-click="goTop()"><i class="bi bi-caret-left-fill"></i> Continue Shopping</a>
+        </div>
+
+        <div>
+            <table>
+                <tr class="mobile-table-header">
+                    <td>Your Cart</td>
+                </tr>
+                <tr class="table-header-box">
+                    <th>Product</th>
+                    <th>Info</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th>Action</th>
+                </tr>
+                <tr ng-repeat="p in cartList" class="repeat-p">
+                    <td><img class="cartProductImage" src="{{p.image}}" alt=""></td>
+                    <td class="info-set">
+                        <div class="p-name">{{p.name}}</div>
+                        <div><span>Size:</span> <span class="info-set-size">{{p.size}}</span></div>
+                    </td>
+                    <td class="price">
+                        <h4>Price</h4>
+                        <div>{{p.price | currency}}</div>
+                    </td>
+                    <td class="edit-amount">
+                        <h4>Quantity</h4>
+                        <div>
+                            <button ng-click="stepDown(p.name,p.size)" class="stepDown">-</button>
+                            <input class="PAmount"  type="number" name="" id="" min="1" ng-model="p.amount"><label for=""></label>
+                            <button ng-click="stepUp(p.name,p.size)" class="stepUp">+</button>
+                        </div>
+                    </td>
+                    <td class="price">
+                        <h4>Sub Total</h4>
+                        <div>{{p.price * p.amount | currency}}</div>
+                    </td>
+                    <td class="deleteP">
+                        <h4>Remove</h4>
+                        <button class="bi bi-trash3-fill delete-icon" ng-click="removeProduct(p.name,p.size)"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="cart-finishing" >
+
+            <div class="cart-optional">
+                <div class="coupon">
+                    <label for="coupon"></label>
+                    <input type="text" name="" id="coupon" ng-model="discountCode" placeholder="Coupon Code" ng-change="discountFlag = null">
+                    <button class="apply-coupon" ng-click="applyCoupon(discountCode)">Apply Counpon</button>
+                </div>
+                <div class="discount-apply-alert">
+                    <h5 class="apply-true" ng-if="discountFlag === true">Discount Code has been applied!</h5>
+                    <h5 class="apply-false" ng-if="discountFlag === false && discountCode.length > 1">Discount Code does not exist!</h5>
+                </div>
+            </div>
+
+            <div class="cart-total">
+                <h3>Cart Totals</h3>
+
+                <div class="total-subTotal">
+                    <h4>Sub Total</h4><div>{{totalCartPrice | currency}}</div>
+                </div>
+                <div class="ship-cost">
+                    <h4>Shipping Cost</h4><div>{{shippingCost | currency}}</div>
+                </div>
+                <div class="discount">
+                    <h4>Discount</h4><div>{{discount | currency}} (-)</div>
+                </div>
+                <div class="tax-cost">
+                    <h4>VAT (Value-Added Tax)</h4><div>{{taxRate * totalCartPrice | currency}}</div>
+                </div>
+                <div class="total-cartTotal">
+                    <h3>Total</h3><div>{{totalCartPrice + shippingCost + (taxRate * totalCartPrice) - discount | currency}}</div>
+                </div>
+
+                <div>
+                    <a href="#!check-out" class="toCheckOutBtn" ng-click="goTop()">Process to Checkout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>

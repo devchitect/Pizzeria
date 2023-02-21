@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="slider">
+
+        <div class="slider-box">
+            <div class="slide fade">
+                <a href="#!promotion"><img class="imgBanner" src="images/banner&offer/Banner3.png" alt=""></a>
+            </div>
+            <div class="slide fade">
+                <a href="#!promotion"><img class="imgBanner" src="images/banner&offer/Banner2.png"  alt=""></a>
+            </div>
+            <div class="slide fade">
+                <a href="#!promotion"><img class="imgBanner" src="images/banner&offer/Banner1.png"  alt=""></a>
+            </div>
+            <div class="slide fade">
+                <a href="#!promotion"><img class="imgBanner" src="images/banner&offer/Banner4.png"  alt=""></a>
+            </div>
+        </div>
+
+        <div class="control prev" ng-click="plusSlides(-1)" >
+            <i class='bi bi-chevron-left' ></i>
+        </div>
+        <div class="control next" ng-click="plusSlides(+1)">
+            <i class='bi bi-chevron-right' ></i>
+        </div>
+
+        <div class="dotsbox">
+            <span class="dot" ng-click="currentSlide(1)"></span>
+            <span class="dot" ng-click="currentSlide(2)"></span>
+            <span class="dot" ng-click="currentSlide(3)"></span>
+            <span class="dot" ng-click="currentSlide(4)"></span>
+        </div>
+
+    </div>
+
+    <div class="introduce-wrapper">
+
+        <div class="intro-text">
+            <h1>Welcome to
+                <br>  Casanova Pizzeria !!</h1>
+        </div>
+
+        <div class="introduce-home">
+
+            <div class="introduce-banner"></div>
+
+            <div class="introduce-content">
+                <div class="intro-title">
+                    <span class="text-normal">There are many</span>
+                    <br>
+                    <span class="bershireFont">unique signature pizza flavors,</span>
+                    <br>
+                    <span class="text-normal">from our most</span>
+                    <br>
+                    <span class="bershireFont">passsionate & tanlented chefs,</span>
+                    <br>
+                    <span class="text-normal">to be taste.</span>
+                </div>
+
+                <div ng-controller="menuController" class="pizzaHome">
+                    <div ng-repeat="f in listOfFood | filter: {category:'Pizza'} | limitTo : 6" ng-controller="menuBuyController" class="home-product-wrapper">
+                        <div class="home-product">
+                            <div class="home-product-img">
+                                <img src="{{f.image}}" alt="">
+                                <a href="#!menu">
+                                    <div class="home-overlay">
+                                        <h4>Ingredients:</h4>
+                                        <div>
+                                            <p class="ingredient-text">{{f.ingredient}}</p>
+                                        </div>
+                                     </div>
+                                </a>
+                            </div>
+                            <div class="home-product-name">{{f.name}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="goToMenu-wrapper"><button><a href="#!menu" class="goToMenuBtn" ng-click="goTop()">GO TO MENU</a></button></div>
+            </div>
+
+        </div>
+
+        <div class="strong-points">
+            <div>
+                <div class="bi bi-award point-icon"></div>
+                <h4>Guaranteed Quality</h4>
+            </div>
+
+            <div>
+                <div class="bi bi-stopwatch point-icon"></div>
+                <h4>On Time Delivery</h4>
+            </div>
+
+            <div>
+                <div class="bi bi-lightning point-icon"></div>
+                <h4>Passionate Chefs</h4>
+            </div>
+
+            <div>
+                <div class="bi bi-heart-pulse-fill point-icon"></div>
+                <h4>Tasty Food</h4>
+            </div>
+        </div>
+
+        <div class="home-sandwich">
+
+            <div class="home-sandwich-banner"></div>
+
+            <div class="home-sandwich-content">
+
+                <div class="home-sandwich-title">
+                    <h2 class="bershireFont">Sandwiches are also excellently served.</h2>
+                    <p class="text-normal">Check it out.</p>
+                </div>
+
+                <div ng-controller="menuController" class="sandwichHome">
+                    <div ng-repeat="f in listOfFood | filter: {category:'Sandwich'} | limitTo : 6" ng-controller="menuBuyController" class="home-sandwich-wrapper">
+                        <div class="home-product">
+                            <div class="home-product-img">
+                                <img src="{{f.image}}" alt="">
+                                <a href="#!menu">
+                                    <div class="home-overlay">
+                                        <h4>Ingredients:</h4>
+                                        <div>
+                                            <p class="ingredient-text">{{f.ingredient}}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="home-product-name">{{f.name}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="goToMenu-wrapper"><button><a href="#!menu" class="goToMenuBtn" ng-click="goTop()">GO TO MENU</a></button></div>
+            </div>
+        </div>
+
+        <div class="client-reviews">
+
+            <div class="client-interact">
+                <div>
+                    <h5>Lovely Memories</h5>
+                    <h3>from our Best</h3>
+                    <h4>Pizza Lovers.</h4>
+                </div>
+                <a href="#!customer-review" class="toAllReviewsBtn">Customer Reviews</a>
+            </div>
+
+            <div class="cr-box">
+
+                <div class="child-box">
+                    <div class="info-box">
+                        <div  class="client-img"><img src="{{reviews[reviewCount].img}}" alt=""></div>
+                        <div class="client-name">
+                            <h3 >{{reviews[reviewCount].fullname}}</h3>
+                        </div>
+                    </div>
+
+                    <div class="client-said">
+                        <p >"{{reviews[reviewCount].description}}"</p>
+                    </div>
+                </div>
+
+
+                <div class="review-buttons">
+                    <button ng-click="slide(-1)" class="prevBtn">Prev</button>
+                    <button ng-click="slide(1)" class="nextBtn">Next</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

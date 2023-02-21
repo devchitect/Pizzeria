@@ -1,0 +1,135 @@
+
+:root{
+    --yellow: #fbdb31;
+    --mainred: #c22828;
+    --darkred: #8e1504;
+    --sidered: #d53232;
+    --lightorange: #fea300;
+    --strongorange: #f08000;
+    --gold: #ffc222;
+
+}
+
+@font-face{
+    font-family: Pattaya;
+    src: url(../fonts/Pattaya-Regular.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Inter-SemiBold;
+    src: url(../fonts/Inter-SemiBold.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: PermanentMarker;
+    src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: GreatVibes;
+    src: url(../fonts/GreatVibes-Regular.ttf);
+}
+@font-face {
+    font-family: BerkshireSwash;
+    src: url(../fonts/BerkshireSwash-Regular.ttf);
+}
+
+
+@keyframes load{
+    100%    {opacity: 0}
+    0%      {opacity: 1}
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+ul{
+    list-style-type: none;
+}
+button{
+    background: initial;
+    border: initial;
+    cursor: pointer;
+}
+
+body{
+    animation: 600ms load reverse;
+    overflow-x: hidden;
+}
+
+.textColor-red{
+    color: var(--sidered) !important;
+}
+
+.goTopBtn{
+    position: fixed;
+    bottom: 50px;
+    right: 35px;
+    z-index: 999;
+    background: linear-gradient(180deg,var(--gold),var(--lightorange),var(--strongorange));
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 210%;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px orange;
+    animation: showUp 300ms reverse;
+}
+
+@keyframes showUp {
+    100%{scale: 0.3; opacity: 0}
+    0%{scale: 1; opacity: 1}
+}
+
+.goTopBtn:hover{
+    color: var(--darkred);
+}
+
+@media screen and (max-width:1000px ){
+    .goTopBtn{
+        width: 35px;
+        height: 35px;
+        font-size: 250%;
+        bottom: 60px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:640px ){
+    .goTopBtn{
+        width: 35px;
+        height: 35px;
+        font-size: 250%;
+        bottom: 25px;
+        right: 15px;
+    }
+}

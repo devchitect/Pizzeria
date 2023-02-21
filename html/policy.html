@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="policy-block" ng-controller="policyController">
+    <h1 class="wtf">Our Term Of Use & Policies</h1>
+    <div class="policy-headlines-block" ng-click="dropFunction('TermOfUse')">
+        <h1 class="policy-headlines">WEBSITE TERMS OF USE</h1>
+        <i class="bi" ng-class="{'bi-caret-right-fill' : !termOfUse, 'bi-caret-down-fill': termOfUse}"></i>
+    </div>
+    <div class="policy-terms-of-use policy-hidden" ng-class="{'policy-reveal': termOfUse}">
+        <div class="policy-small-headlines" ng-click="dropFunction('touIntro')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !touIntro, 'bi-caret-down-fill': touIntro}"></i>
+            <h3>TERMS OF USE INTRODUCTION</h3>
+        </div>
+        <div class="tou-intro policy-hidden" ng-class="{'policy-reveal': touIntro}">
+            <p class="policy-content-block">www.casanova.com (referred to as the “Website”) is owned and operated by Casanova Pizzeria (referred to as the “Company”) . The following terms and conditions (referred to as “Terms of Use” for short), govern your access to and use of this Website. Your use of this Website is conditioned upon your acceptance of these Terms of Use.</p>
+            <p class="policy-content-block">If you do not agree to these terms and conditions, you are not authorized to access or use this Website (you can leave by closing out of your browser tab or window).</p>
+            <p class="policy-content-block">We may revise and update these Terms or Use at any time.  All changes are effective immediately when we post them.  Your continued use of the Website following the posting of revised Terms of Use means that you accept and agree to the changes.  You are expected to check this page from time to time so you are aware of any changes, as they are binding on you.</p>
+            <p class="policy-content-block">These Terms of Use do not cover any services run by other companies, such as clicking on a Calendly link or using the webchat client we use.  Those companies have their own terms of use, privacy, and cookie policies.  Any information you give them may follow their rules and not ours. </p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('aUse')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !aUse, 'bi-caret-down-fill': aUse}"></i>
+            <h3>ACCEPTABLE USE</h3>
+        </div>
+        <div class="a-use policy-hidden" ng-class="{'policy-reveal': aUse}">
+            <p>Our Company grants you permission to access and use this Website for your own personal and business use only. You shall not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store or transmit any of the material on our Website, except as follows:</p>
+            <ul class="policy-para-list">
+                <li>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.</li>
+                <li>You may store files that are automatically cached by your Web browser for display enhancement purposes.</li>
+                <li>If we provide desktop, mobile or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal and business use, provided you agree to be bound by our end user license agreement for such applications.</li>
+                <li>If we provide social media features with certain content, you may take such actions as are enabled by such features.</li>
+            </ul>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('oUse')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !oUse, 'bi-caret-down-fill': oUse}"></i>
+            <h3>USE ON BEHALF OF ORGANIZATION</h3>
+        </div>
+        <div class="o-use policy-hidden" ng-class="{'policy-reveal': oUse}">
+            <p class="policy-content-block">If you use our website or expressly agree to these terms and conditions in the course of a business or other organizational project, then by doing so you bind both:</p>
+            <ol class="policy-para-ordered-list">
+                <li>yourself;</li>
+                <li>the person, company or other legal entity that operates that business or organizational project,</li>
+            </ol>
+            <p class="policy-content-block">to these terms and conditions, and in these circumstances references to “you” in these terms and conditions are to both the individual user and the relevant person, company or legal entity, unless the context requires otherwise.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('pUse')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !pUse, 'bi-caret-down-fill': pUse}"></i>
+            <h3>PROHIBITED USES</h3>
+        </div>
+        <div class="p-use policy-hidden" ng-class="{'policy-reveal': pUse}">
+            <ul class="policy-para-list">
+                <li>Use the Website in any way that violates any applicable federal, state, local or international law.</li>
+                <li>Use the Website to engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of the Website, or which, as determined by us, may harm the Company or users of the Website or expose them to liability.</li>
+                <li>Use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party’s use of the Website.</li>
+                <li>Use any robot, spider or other automatic device, process or means to access the Website for any purpose, including monitoring or copying any of the material on the Website.</li>
+                <li>Use any manual process to monitor or copy any of the material on the Website or for any other unauthorized purpose without our prior written consent.</li>
+                <li>Use any device, software or routine that interferes with the proper working of the Website.</li>
+                <li>Introduce any viruses, Trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</li>
+                <li>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer or database connected to the Website.</li>
+                <li>Attack the Website via a denial-of-service attack or a distributed denial-of-service attack.</li>
+                <li>Otherwise attempt to interfere with the proper working of the Website.</li>
+            </ul>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('intProp')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !intProp, 'bi-caret-down-fill': intProp}"></i>
+            <h3>INTELLECTUAL PROPERTY</h3>
+        </div>
+        <div class="int-prop policy-hidden" ng-class="{'policy-reveal': intProp}">
+            <p class="policy-content-block">This Website and all of its contents, features, and functionality (including but not limited to the information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof)
+                are the property of the Company, or are licensed for use by the Company, and are protected by Viet Nam and international copyright, trademark and other intellectual property rights laws.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('trademark')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !trademark, 'bi-caret-down-fill': trademark}"></i>
+            <h3>TRADEMARKS</h3>
+        </div>
+        <div class="trademark policy-hidden" ng-class="{'policy-reveal': trademark}">
+            <p class="policy-content-block">The Company name and all related names, logos, product and service names, designs and slogans are trademarks of the Company or its affiliates or licensors. You must not use such marks without the prior written permission of the Company or its affiliates or licensors.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('warranty')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !warranty, 'bi-caret-down-fill': warranty}"></i>
+            <h3>DISCLAIMER OF WARRANTIES</h3>
+        </div>
+        <div class="warranty policy-hidden" ng-class="{'policy-reveal': warranty}">
+            <p class="policy-content-block">You understand that while we make every effort to provide a safe browsing experience, we cannot and do not guarantee or warrant that files available for downloading from the Internet or the Website will be free of viruses or other destructive code. You are responsible for implementing
+                sufficient procedures and checkpoints to satisfy your particular requirements for anti-virus protection and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data. We will not be liable for any loss or damage caused by a distributed denial-of-service
+                attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of the website or any services or items obtained through the website or to your downloading of any material posted on it, or on any website linked to it.
+                Your use of the website, its content and any services or items obtained through the website is at your own risk. The website, its content and any services or items obtained through the website are provided on an “as is” and “as available” basis, without any warranties of any kind, either express or implied. Neither the Company
+                nor any person associated with the Company makes any warranty or representation with respect to the completeness, security, reliability, quality, accuracy or availability of the website. Without limiting the foregoing, neither the Company nor anyone associated with the Company represents or warrants that the website, its content
+                or any services or items obtained through the website will be error-free or uninterrupted, that defects will be corrected, that our site or the server that makes it available are free of viruses or other harmful components or that the website or any services or items obtained through the website will otherwise meet your needs or expectations.
+                The Company hereby disclaims all warranties of any kind, whether express or implied, statutory or otherwise, including but not limited to any warranties of merchantability, non-infringement and fitness for particular purpose.
+                This does not affect any warranties which cannot be excluded or limited under applicable law.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('liability')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !liability, 'bi-caret-down-fill': liability}"></i>
+            <h3>LIMITATION ON LIABILITY</h3>
+        </div>
+        <div class="liability policy-hidden" ng-class="{'policy-reveal': liability}">
+            <p class="policy-content-block">To the maximum extent permitted by applicable law, in no event will the Company, its affiliates or their licensors, service providers, employees, agents, officers or directors be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Website,
+                any websites linked to it, any content on the Website or such other websites or any services or items obtained through the Website or such other websites, including any direct, indirect, special, incidental, consequential or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue,
+                loss of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data and whether cause by tort (including negligence), breach of contract or otherwise, even if foreseeable. If you are dissatisfied with any portion of the website, or with any of these terms of use, your sole and exclusive remedy is to discontinue using the website.
+                <br>
+                This does not affect any liability which cannot be excluded or limited under applicable law.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('indem')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !indem, 'bi-caret-down-fill': indem}"></i>
+            <h3>INDEMNIFICATION</h3>
+        </div>
+        <div class="indem policy-hidden" ng-class="{'policy-reveal': indem}">
+            <p class="policy-content-block">You agree to defend, indemnify and hold harmless the Company, its affiliates, licensors and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses or fees
+                (including reasonable attorneys’ fees) arising out of or relating to your violation of these Terms of Use or your use of the Website, including, but not limited to, any use of the Website’s content, services and products other than as expressly authorized in these Terms of Use or your use of any information obtained from the Website.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('waiver')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !waiver, 'bi-caret-down-fill': waiver}"></i>
+            <h3>WAIVER AND SEVERABILITY</h3>
+        </div>
+        <div class="indem policy-hidden" ng-class="{'policy-reveal': waiver}">
+            <p class="policy-content-block">No waiver by the Company of any term or condition set forth in these Terms of Use shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of the Company to assert a right or provision under these Terms of Use shall not constitute a waiver of such right or provision.
+                If any provision of these Terms of Use is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Use will continue in full force and effect.</p>
+        </div>
+    </div>
+    <div class="policy-headlines-block" ng-click="dropFunction('PrivacyPolicy')">
+        <h1 class="policy-headlines">WEBSITE PRIVACY POLICY</h1>
+        <i class="bi" ng-class="{'bi-caret-right-fill' : !privacyPolicy, 'bi-caret-down-fill': privacyPolicy}" ></i>
+    </div>
+    <div class="policy-privacy-policy policy-hidden" ng-class="{'policy-reveal': privacyPolicy}">
+        <div class="policy-small-headlines" ng-click="dropFunction('policyIntro')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !policyIntro, 'bi-caret-down-fill': policyIntro}"></i>
+            <h3>PRIVACY POLICY INTRODUCTION</h3>
+        </div>
+        <div class="policy-intro policy-hidden" ng-class="{'policy-reveal': policyIntro}">
+            <p class="policy-content-block">Your privacy on the Internet is of the utmost importance to us. At our Company, we want to make your experience online satisfying and safe. Because we gather certain types of information about our users, we feel you should fully understand our policy and the terms and conditions surrounding the capture and use of that information. The information you provide is safeguarded.</p>
+            <p class="policy-content-block">This Privacy Policy discloses what information we gather and how we use it. It applies to information we collect on this Website, including through electronic messages between you and the Website (for example, when you submit a message using our “Contact” form or text with someone through chat). It does not apply to information collected by us offline or through other means,
+                or to information collected by third parties, including through any application or content that may link to or be accessible from this Website.</p>
+            <p class="policy-content-block">By accessing or using this Website, you agree to this Privacy Policy. Please review it carefully.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('gathertrack')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !gathertrack, 'bi-caret-down-fill': gathertrack}" ></i>
+            <h3>INFORMATION OUR COMPANY GATHERS AND TRACKS</h3>
+        </div>
+        <div class="gather-and-track policy-hidden" ng-class="{'policy-reveal': gathertrack}">
+            <p class="policy-content-block">We gather two types of information about users:</p>
+            <ul class="policy-para-list">
+                <li>Information that users provide through optional, voluntary submissions. This information may include personal information, such as your name, phone number, email address, state and zip code. We collect this information to respond to requests from users, customize our features for individual visitors who are the Company’s customers and to notify customers about updates to our site and products or services.</li>
+                <li>Information that we collect automatically as you navigate the Website. This information may include usage details, IP addresses and information collected through tracking technologies such as cookies and web beacons. Information the Company gathers through aggregated tracking is used to determine which areas of our sites users like and don’t like based on traffic
+                    to those areas. We do not track what individual users read, but rather how well each page performs overall. We collect this information in order to determine how to create the best experience for our clients. For example, we may track search terms entered in our Website’s Search bar as one of many measures of what interests our users, but this tracking is not associated with an individual user.</li>
+            </ul>
+            <p class="policy-content-block">The information we collect automatically may not include personal information, but we may maintain it or associate it with personal information we collect in other ways or receive from third parties. It helps us to improve our Website and to deliver a better and more personalized service, including enabling us to:</p>
+            <ul class="policy-para-list">
+                <li>Estimate our audience size and usage patterns.</li>
+                <li>Store information about your preferences, allowing us to customize our Website according to your individual interests.</li>
+                <li>Speed up your searches.</li>
+                <li>Recognize you when you return to our Website.</li>
+            </ul>
+            <p class="policy-content-block">The information we collect automatically may not include personal information, but we may maintain it or associate it with personal information we collect in other ways or receive from third parties. It helps us to improve our Website and to deliver a better and more personalized service, including enabling us to:</p>
+            <ul class="policy-para-list">
+                <li>Estimate our audience size and usage patterns.</li>
+                <li>Store information about your preferences, allowing us to customize our Website according to your individual interests.</li>
+                <li>Speed up your searches.</li>
+                <li>Recognize you when you return to our Website.</li>
+            </ul>
+            <p class="policy-content-block">The technologies we use for automatic data collection may include:</p>
+            <ul class="policy-para-list">
+                <li>Cookies (or browser cookies). A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website. </li>
+                <li>Web Beacons. Pages of the Website may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or [opened an email] and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>
+            </ul>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('amendment')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !amendment, 'bi-caret-down-fill': amendment}" ></i>
+            <h3>POLICY AMENDMENT</h3>
+        </div>
+        <div class="amendment policy-hidden" ng-class="{'policy-reveal': amendment}">
+            <p class="policy-content-block">Our Company approaches Internet communications with a strong commitment to individual privacy rights and concerns. As the Internet evolves, our policy will continue to change and develop. We therefore reserve the right to amend this Privacy Policy at any time with or without prior notice. Please check this page periodically for changes.
+                Your continued use of the Website following any changes to this Privacy Policy will constitute your acceptance of such changes.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('pIntUse')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !pIntUse, 'bi-caret-down-fill': pIntUse}" ></i>
+            <h3>USE OF PERSONAL INFORMATION</h3>
+        </div>
+        <div class="pInt-use policy-hidden" ng-class="{'policy-reveal': pIntUse}">
+            <p class="policy-content-block">Our Company strictly protects the security of your personal information and honors your choices for its intended use. We do not disclose your information to third parties unless it is specifically stated otherwise. We may use third party contractors to help us operate our business and the Website or administer activities on our behalf,
+                and may share your personal information with these contractors for those limited purposes. We use your information solely to fulfill services, transact a purchase, and/or help us improve our website and product/service offering to you.</p>
+            <p class="policy-content-block">Notwithstanding any other provision to the contrary, the Company reserves the right to cooperate with local, state and federal officials in any investigation relating to any purported illegal activity(ies) and, when required by law, regulation, legal process or government requests, to disclose any personal information furnished by you or
+                collected by the Company to law enforcement authorities or other relevant or related third parties.</p>
+            <p class="policy-content-block">Some of the features on this Website allow you to communicate with us using an online form or chat feature. If your communication requests a response from us, we may send you a response via e-mail. The e-mail response or confirmation may include your personal information, including your name, address, etc. We cannot guarantee that
+                our e-mails to you will be secure from unauthorized interception.</p>
+        </div>
+        <div class="policy-small-headlines" ng-click="dropFunction('access')">
+            <i class="bi" ng-class="{'bi-caret-right-fill' : !access, 'bi-caret-down-fill': access}" ></i>
+            <h3>ACCESSING AND CORRECTING YOUR INFORMATION</h3>
+        </div>
+        <div class="access policy-hidden" ng-class="{'policy-reveal': access}">
+            <p class="policy-content-block">You may contact us if you wish to modify or delete your personal information from our database, and we will use commercially reasonable efforts to accommodate your request. You may also contact us if you believe that any inaccurate or inappropriate information has been obtained or provided to others through your use of this Website.</p>
+        </div>
+    </div>
+    <p class="policy-content-block"></p>
+
+</div>
+</body>
+</html>

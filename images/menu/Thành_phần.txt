@@ -1,0 +1,42 @@
+Pizzas !!
+      Carbonara pizza : thịt má lợn, phô mai Pecorino-Romano, kem béo, hành lá, tiêu đen, trứng.
+      Neapolitan pizza : Sốt cà chua San Marzano, phô mai bufallo-mozzarella, lá húng quế tươi.
+      Mexican pizza : Bánh ngô, sốt enchilada, cà chua, đậu đen, hành lá, phô mai.
+      Salami pizza : xúc xích Ý, sốt marinara, phô mai mozzarella, hành tím, phô mai Parmesan, lá kinh giới cay khô.
+      Seafood pizza : tôm tươi, thịt cua, hành tím, phô mai provolone, phô mai mozzarella, lá húng quế, tiêu đen.
+      Veggie pizza : kem chua, nấm Portobello, cà chua, hành tím, ớt chuông, ô liu, phô mai kem, muối tỏi, thì là.
+	Classic pizza : phô mai mozzarella, ớt chuông, ô liu, nấm, xúc xích, mùi tây khô, thì là.
+	Sicillian pizza: ô liu, cà chua, hành tây, phô mai mozzarella, phô mai parmesan, vụn bánh mì, lá húng quế, phi lê cá cơm.
+-----------------------------------------
+Bánh Mì Tỏi
+
+	Pull-Apart Garlic n Cheese Bread : bánh mì hoa cúc với phô mai mozzarella, rau mùi tây khô, muối tỏi, tỏi.
+	Classic Garlic bread: bánh mì trắng kiểu Pháp, pho mát romano, tỏi băm , bột tỏi tươi, mùi tây tươi, bơ.
+	Spiral Garlic: bánh mì Pháp giòn, bơ, mùi tây tươi, phô mai parmesan, hành lá, tỏi băm.
+	Garlic-Dill Soda Bread : bánh mì nướng lò, bơ sữa, mù tạt xay, thì là, phô mai cheddar bào nhỏ, rau mùi tây khô.
+
+-----------------------------------------
+Bánh mì kẹp nhân
+    
+      Vietnamese sanwich : bánh mì, trứng, thịt nướng, cà rốt, dưa chuột, sốt đặc biệt của Việt Nam, hành tây.
+	Grilled cheese sanwich : bánh mì vuông, thịt xông khói, phô mai cheddar, phô mai parmigiano-reggiano, bơ.
+	Lobster roll : thịt tôm hùm, sốt mayonnaise, tỏi, hành tây, muối kosher, nước cốt chanh, bơ lạt, tiêu, hành lá.
+	Jambon-Beurre : giăm bông thịt lợn thái lát, bơ, dưa chua, bánh mì.
+	Hot Dog : Xúc xích Vienna hấp, mù tạt, hành tím, sốt phô mai.
+
+
+-----------------------------------------
+Desserts
+
+	Apple Crisp: Bánh táo quế nóng hổi phủ yến mạch giòn, kem vani và sốt caramel.
+	Cheesecake: bánh nhân phô mai với lớp vỏ bánh quy giòn với topping trái cây theo mùa.
+	Irish Coffee: Cà phê phong cách Ireland với kem sữa béo và rượu whiskey irish.
+	Blueberry pie: Bánh việt quất với vỏ bánh giòn, bánh mềm thơm mùi bơ sữa và nhân từ quả việt quất tươi.
+
+-----------------------------------------
+Beverages
+	
+	Cocacola : 255 ml
+	Fiji Mineral Water : 330 ml
+	Tea+ : 455 ml
+	Budweiser : 330 ml

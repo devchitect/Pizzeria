@@ -1,0 +1,44 @@
+Pizzas !!
+      Carbonara pizza : Guanciale, Pecorino-Romano cheese, heavy cream, scallions, black pepper, eggs.
+	Hawaiian pizza :  Hawaiian tomato sauce, mozzarella cheese, provolone cheese, cooked ham, and pineapple. 
+      Neapolitan pizza : San Marzano tomato sauce, buffalo mozzarella , fresh basil leaves.
+      Mexican pizza : Tortillas, enchilada sauce, tomatoes, black beans, scallions, cheese.
+      Salami pizza : salami, marinara sauce, mozzarella cheese, red onion , Parmesan cheese, dried oregano.
+      Seafood pizza : fresh shrimp, crab meat, purple onion, provolone cheese, mozzarella cheese, basil leaves, black pepper.
+      Veggie pizza : sour cream, shroom, tomatoes, purple onion, bell pepper, olive, cream cheese, garlic salt, dill weed.
+	Classic pizza : mozzarella cheese, bell pepper, olive, mushroom, sausages, dried parsley, dill weed.
+	Sicillian pizza: olive, tomatoes, onion, mozzarella cheese,parmesan cheese, bread crumb, basil leaves ,anchovy fillets.
+-----------------------------------------
+Garlic Breads
+
+	Pull-Apart Garlic n Cheese Bread : brioche, mozzarella cheese,dried parsley flakes, garlic salt.
+	Classic Garlic bread: french white bread, romano cheese , minced garlic n garlic powder, fresh parsley, butter.
+	Spiral Garlic:crusty French bread,  butter, fresh parsley, parmesan cheese, green onion, minced garlic.
+	Garlic-Dill Soda Bread : baked bread, buttermilk, ground mustard, dill weed, shredded cheddar cheese, dried parsley.
+
+-----------------------------------------
+Sanwiches
+    
+      Vietnamese sanwich : eggs, grilled meat, carrot, cucumber, vietnamese special sauce, onion.
+	Grilled cheese sanwich : bacon, cheddar cheese, parmigiano-reggiano cheese, butter.
+	Lobster roll : lobster meat, mayonnaise, garlic, onion, kosher salt, lemon juice, unsalted butter, pepper, scallions.
+	Jambon-Beurre : sliced pork ham, butter, pickles, baguette.
+	Hot Dog : steamed Wiener, mustard, purple onion, cheese sause.
+	Steak Burger : hamburger bun, prime rib, smoked bacon, blue cheese, green lettuce, red onion, pepper, butter, fresh tomato.
+
+
+-----------------------------------------
+Desserts
+
+	Apple Crisp: apple cinnamon cake filling topped with crunchy oat crumble, vanilla ice cream and caramel sauce.
+	Cheesecake: cheesecake filling topped with cracker crust. Seasonal fruit topping at additional cost.
+	Irish Coffee: heavy whipping cream, irish whiskey, hot coffee.
+	Blueberry pie: fresh blueberries , cornstarch, kosher salt, butter, granulated sugar.
+
+-----------------------------------------
+Beverages
+	
+	Cocacola : 255 ml
+	Fiji Mineral Water : 330 ml
+	Tea+ : 455 ml
+	Budweiser : 330 ml

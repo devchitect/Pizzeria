@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+
+</head>
+
+<body>
+
+<!--Stores-->
+<div class="stores-box" ng-controller="storesController">
+
+    <h1 class="stores-header">Store Location</h1>
+
+    <main class="stores-content" ng-controller="storesData">
+
+        <div class="map-box">
+            <h3 class="stb-title">Locate us on the map:</h3>
+
+        </div>
+
+        <div class="stores-textbox">
+            <h3 class="stb-title">Stores:</h3>
+            <form class="stores-form">
+                <label for="country"></label>
+                <select id="country" name="country">
+                    <option disabled selected>Country</option>
+                </select>
+
+                <label for="city"></label>
+                <select id="city" name="city">
+                    <option disabled selected>City/Province</option>
+                </select>
+
+                <label for="district"></label>
+                <select id="district" name="district">
+                    <option disabled selected>District/State</option>
+                </select>
+                <button id="submitLocation" ng-click="storesFilter()">Search</button>
+            </form>
+
+            <div class="stores-details">
+                <div class="stores-card" ng-repeat="s in stores | filter : currCountry | filter : currCity | filter: currDistrict" >
+                    <h4>{{s.name}}</h4>
+                    <div>
+                        <h5><span>{{s.street}}</span> <span>{{s.district}}</span> <span>{{s.city}}</span> <span>{{s.country}}</span></h5>
+                        <h5><a href="tel:{{s.storePhone}}">{{s.storePhone}}</a></h5>
+                        <h5>{{s.timeopen}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>

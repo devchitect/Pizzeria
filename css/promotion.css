@@ -1,0 +1,92 @@
+.promo-wrapper{
+    margin: 50px 0 100px;
+}
+.promo{
+    display: flex;
+    width: 100%;
+    padding: 1% 10%;
+}
+.promo-header{
+    color: #3c3c3c;
+    text-align: center;
+    font-family: Poppins-ExtraBold, sans-serif;
+}
+.promo-box{
+    margin-top: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-radius: 10px;
+    border: 5px double lightgrey;
+    background: url("../images/background/gray-marble-textured-background.jpg");
+    background-size: 30%;
+    opacity: 0.85;
+    transition: 300ms;
+}
+
+.promo-box:hover{
+    opacity: 1;
+    transform: scale(1.025);
+    box-shadow: 0 0 25px 5px #bfbfbf;
+}
+.promo-box:hover .codePromotion span{
+    color: var(--sidered);
+}
+
+.imgPromotion-box{
+    width: 100%;
+}
+.imgPromotion{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.detailPromotion{
+    text-align: left;
+    margin: 30px;
+    font-size: 100%;
+}
+.detailPromotion div{
+    margin: 6px 0;
+}
+
+.contentPromotion, .codePromotion span{
+    font-family: Poppins-SemiBold, sans-serif;
+    color: #3c3c3c;
+}
+.contentPromotion{
+    text-transform: uppercase;
+    font-size: 135%;
+}
+
+.codePromotion{
+    font-size: 120%;
+}
+
+/*Responsive*/
+
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (max-width: 1200px){
+    .promo-box{
+        padding: 10px;
+        grid-template-columns: 100%;
+    }
+    .detailPromotion{
+        margin: 20px 5px;
+    }
+}
+@media screen and (max-width: 640px){
+  .detailPromotion{
+      font-size: 100%;
+      margin: 15px 5px;
+  }
+    .contentPromotion{
+        font-size: 100%;
+    }
+    .codePromotion{
+        font-size: 100%;
+    }
+}

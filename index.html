@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casanova Pizzeria</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header&navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sign-in-popup.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/policy.css">
+    <link rel="stylesheet" href="css/stores.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/user-information.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/order-complete.css">
+    <link rel="stylesheet" href="css/promotion.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!--Frameworks n Libary-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/ngStorage-module.min.js"></script>
+
+
+</head>
+<body id="body" ng-app="myApp">
+<!--Dzung-Start-->
+
+<div class="header-nav">
+    <!--Header-->
+    <header id="header">
+        <!--   Header contains logo, slogan, hotline, email, social links, and user account features-->
+        <div class="header-content">
+            <div class="logo-slogan">
+                <div class="logo"><a href="#/!"><img class="logo-img" src="images/logo.png" alt="" ng-click="goTop()"></a></div>
+                <div class="slogan">" Love at first bite."</div>
+            </div>
+
+            <div class="hotline-header">
+                <div><span class="h-title"><i class="bi bi-headset"></i> Hotline</span> <a href="tel:0123456789">0123.456.789</a></div>
+                <div><span class="h-title"><i class="bi bi-envelope-at"></i> Email</span> <a href="mailto:support@.cocom">support@casanova.com</a></div>
+            </div>
+
+            <div class="upper-features">
+
+                <div id="nav-icon" class="bi bi-list"></div>
+
+                <div class="cart">
+                    <a href="#!cart" class="cart-content" ng-click="goTop()">
+                        <div class="cart-icon-box">
+                            <span class="cart-icon"><i class="bi bi-basket"></i></span>
+                            <span class="product-quantity">{{quantity}}</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="account-box">
+                    <button id="account-icon" class="bi bi-person-square"></button>
+                    <div class="after-signIn">
+
+                    </div>
+                </div>
+
+                <div class="header-social">
+                    <a href="" class="bi bi-facebook social" ng-click="goTop()"></a>
+                    <a href="" class="bi bi-instagram social" ng-click="goTop()"></a>
+                    <a href="" class="bi bi-twitter social" ng-click="goTop()"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!--Navigation Bar-->
+    <nav class="nav nav-deactive">
+
+        <div class="nav-content">
+            <ul>
+                <li><a href="#/!" class="nav-link" id="home-page" ng-click="goTop()">Home</a></li>
+                <li class="menu-nav">
+                    <a href="#!menu" class="nav-link" id="menu-page" ng-click="goTop()">Menu</a>
+                </li>
+                <li class="promo-nav">
+                    <a href="#!promotion" class="nav-link" id="promotion-page" ng-click="goTop()">Promotions</a>
+                    <ol class="promo-dropdown">
+                        <li><a href="" class="promo-link">Discounts</a></li>
+                        <li><a href="" class="promo-link">Membership Special</a></li>
+                    </ol>
+                </li>
+                <li class="about-nav">
+                    <a href="#!about" class="nav-link" id="about-page" ng-click="goTop()">About</a>
+                    <ol class="about-dropdown">
+                        <li><a href="" class="about-link">About Us</a></li>
+                        <li><a href="" class="about-link">Customer Reviews</a></li>
+                    </ol>
+                </li>
+                <li><a href="#!policy" class="nav-link" id="policy-page" ng-click="goTop()">Policy</a></li>
+                <li><a href="#!contact" class="nav-link" id="contact-page" ng-click="goTop()">Contact</a></li>
+                <li><a href="#!stores" class="nav-link" id="stores-page" ng-click="goTop()"><i class="bi bi-geo-alt"></i> Stores</a></li>
+            </ul>
+        </div>
+
+        <div class="hotline">
+            <div><span class="title"><i class="bi bi-headset"></i> Hotline</span> <a href="tel:0123456789">0123.456.789</a></div>
+            <div><span class="title"><i class="bi bi-envelope-at"></i> Email</span> <a href="mailto:support@abcxyz.com">support@casanova.com</a></div>
+        </div>
+
+        <div class="cart">
+            <a href="#!cart" class="cart-content" ng-click="goTop()" ng-click="updateCart() ">
+                <div class="cart-title">View Cart</div>
+                <div class="cart-icon-box">
+                    <span class="cart-icon"><i class="bi bi-basket"></i></span>
+                    <span class="product-quantity" >{{quantity}}</span>
+                </div>
+                <div class="line">:</div>
+                <div class="cart-info">
+                    <div><span class="total-price">{{totalCartPrice | currency}}</span><span class="currency"></span></div>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+</div>
+
+
+
+<!--Popup Sign In Box-->
+<section class="account-details">
+    <div class="popup-signIn-bg" onclick="closeAcc()"></div>
+    <main class="signIn-form">
+        <i id="account-close" class="bi bi-x-square"></i>
+        <div class="membership-banner">
+            <a href=""><img src="images/banner&offer/membership-special.png" alt=""></a>
+        </div>
+        <div class="signIn-box">
+            <div class="signIn-title">
+                <h2>Welcome !!</h2>
+                <p>Are you Casanova Member ?!
+                    <br> Sign in before payment to earn reward points for our membership promotions.</p>
+            </div>
+
+            <div class="signIn">
+                <h3>SIGN IN</h3>
+                <form id="Fake-SignIn" class="form-box">
+                    <div class="email">
+                        <div class="field">
+                            <input type="text" name="email" id="email" required autocomplete="off">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="password">
+                        <div class="field">
+                            <input type="password" name="password" id="password" required >
+                            <label for="password">Password</label>
+                            <i class="bi bi-eye-slash-fill show" onclick="showPass()"></i>
+                        </div>
+                    </div>
+                    <div class="saved-pass">
+                        <div>
+                            <input type="checkbox" name="savedpass" id="saved-pass">
+                            <label for="saved-pass" style="cursor: pointer">Save Password?</label>
+                        </div>
+                        <a href="">Forget Password?</a>
+                    </div>
+                    <button class="submit" type="button"><a href="#/!" onclick="fakeSignIn()" ng-click="activeCustomer()">Sign In</a></button>
+                </form>
+                <div class="to-signUp">
+                    <div class="blah">You don't have an account yet ?!</div>
+                    <div><a href="#!sign-up" onclick="closeAcc()" id="sign-up-here" ng-click="goTop()">Sign Up Here!</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+
+<section class="signin-alert">
+    <div class="popup-si-alert dp-none">
+        <div><i class="bi bi-check-circle-fill"></i></div>
+        <h3>Sign In <br>
+            <span>Successful</span></h3>
+        <button onclick="closeAlert()">Okay</button>
+    </div>
+</section>
+
+<section class="user-info">
+    <div class="user-popup dp-none">
+        <div class="bi bi-x-square" onclick="closeUser()"></div>
+        <h4>Welcome Back, {{name}} !</h4>
+        <h5>This is your Casanova's Membership profile:</h5>
+        <ul>
+            <li><span>Fullname</span> : {{name}}</li>
+            <li><span>Address</span> : {{address}}</li>
+            <li><span>Birth</span> : {{birth}}</li>
+            <li><span>Gender</span> : {{gender}}</li>
+            <li><span>Phone Number</span> : {{phone}}</li>
+            <li><span>Reward Points</span> : {{points}}</li>
+        </ul>
+        <button class="redeem-btn">Redeem Points</button>
+        <button class="log-out" onclick="logOut()">Log Out</button>
+    </div>
+</section>
+<!--Dzung-End-->
+
+<!--Scroll to Top Button-->
+<div class="goTopBtn bi bi-arrow-up-circle dp-none" ng-click="goTop()"></div>
+
+<!--The View-->
+<ng-view></ng-view>
+
+
+
+<!--Dzung-Start-->
+<footer class="footer" id="footer">
+    <div class="footer-background"><div class="footer-background-layer"></div></div>
+    <div class="upper-footer">
+        <div class="goodbye">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="">
+                <img src="images/vertify-quality.png" alt="" class="vetified-quality">
+            </div>
+            <div>
+                <span class="goodbye-text">- We are glad to be of service -</span>
+            </div>
+            <div class="feat">
+                <img class="pay-icon" src="images/payments/MasterCard.png" alt="">
+                <img class="pay-icon" src="images/payments/Visa.png" alt="">
+                <img class="pay-icon" src="images/payments/Momo.png" alt="">
+                <img class="pay-icon" src="images/payments/Zalo-pay.png" alt="">
+            </div>
+            <div class="cetified"><img class="bct" src="images/bct.png" alt=""></div>
+        </div>
+
+        <div class="footer-moreinfo">
+            <h3>More Information</h3>
+            <ul>
+                <li><a href="#!about" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>About Us</span></a></li>
+                <li><a href="#!stores" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Stores Locations</span></a></li>
+                <li><a href="#!promotion" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Promotions</span></a></li>
+                <li><a href="#/!" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>News</span></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#!policy" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Privacy Policy</span></a></li>
+                <li><a href="#!policy" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Delivery/Return Policy</span></a></li>
+                <li><a href="#!policy" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Payment Policy</span></a></li>
+                <li><a href="" ng-click="goTop()"><span class="bi bi-arrow-right-short"></span> <span>Customer Care</span></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <ul>
+                <li><i class="bi bi-headset"></i> <span>Hotline:</span> <a href="tel:0123456789">0123.456.789</a></li>
+                <li><i class="bi bi-envelope-at"></i> <span>Email:</span> <a href="mailto:abcxyz@abcxyz.com">support@casanova.com</a></li>
+                <li>
+                    <span>Connect with us:</span>
+                    <div class="footer-social">
+                        <a href="" class="bi bi-facebook social" ng-click="goTop()"></a>
+                        <a href="" class="bi bi-instagram social" ng-click="goTop()"></a>
+                        <a href="" class="bi bi-twitter social" ng-click="goTop()"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <span>&copy; Developed by Devchitect.</span>
+        <span>All Rights Reserved.</span>
+    </div>
+</footer>
+<!--Dzung-End-->
+
+
+
+<script src="js/sign-in.js"></script>
+<script src="js/header&navbar.js"></script>
+<script src="js/routes-config.js"></script>
+
+</body>
+</html>

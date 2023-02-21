@@ -1,0 +1,124 @@
+.policy-block {
+    width: 80%;
+    margin: 50px auto;
+}
+.wtf{
+    text-align: center;
+    margin: 50px 0 30px;
+    font-family: Poppins-ExtraBold, sans-serif;
+    color: #3c3c3c;
+}
+.policy-headlines {
+    width: 95%;
+    display: inline-block;
+    color: var(--sidered);
+    padding: 10px 0;
+    font-family: Poppins-SemiBold, sans-serif;
+    font-size: 165%;
+}
+
+.policy-headlines-block, .policy-small-headlines {
+    cursor: pointer;
+    padding-left: 10px;
+    position: relative;
+    margin: 10px 0 ;
+}
+
+.policy-headlines-block i {
+    text-align: center;
+    font-size: large;
+}
+
+ .policy-small-headlines h3:after{
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     height: 5px;
+     width: 0%;
+     background: #555555;
+     opacity: 0;
+     transition: 500ms;
+}
+.policy-headlines-block h1:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0%;
+    background: #555555;
+    opacity: 0;
+    transition: 500ms;
+}
+.policy-headlines-block:hover h1:after, .policy-small-headlines:hover h3:after{
+    opacity: 1;
+    width: 65%;
+    background: linear-gradient(90deg, rgba(1, 1, 1, 0.65), #ffffff) ;
+}
+.policy-small-headlines{
+    display: flex;
+    align-items: center;
+}
+
+.policy-small-headlines h3 {
+    display: inline-block;
+    color: #3c3c3c;
+    margin: 6px 0 6px 10px;
+}
+
+.policy-small-headlines i {
+    display: inline-block;
+}
+
+.policy-block p {
+    margin-bottom: 10px;
+}
+
+.policy-para-list, .policy-para-ordered-list, .policy-content-block{
+    padding-left: 30px !important;
+}
+
+.policy-hidden {
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    opacity: 0;
+}
+
+.policy-reveal {
+    position: relative;
+    height: 100%;
+    opacity: 1;
+    transition: 500ms ease;
+}
+
+@media only screen and (max-width: 1200px) {
+    .policy-block {
+        width: 95%;
+        font-size: large;
+        margin: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .policy-block {
+        width: 95%;
+        font-size: 95%;
+        margin: 0 auto;
+    }
+    .policy-headlines-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .policy-headlines{
+        width: auto;
+        font-size: 135%;
+    }
+    .policy-small-headlines h3{
+
+    }
+
+}

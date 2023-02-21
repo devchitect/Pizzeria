@@ -1,0 +1,549 @@
+/*Buttons*/
+.toAllReviewsBtn{
+    text-transform: uppercase;
+    margin-top: 15px;
+    color: white;
+    background: var(--sidered);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: Poppins-SemiBold, sans-serif;
+}
+.toAllReviewsBtn:hover{
+    background: var(--lightorange);
+    color: var(--darkred);
+    text-shadow: 1px 1px 1px var(--darkred);
+}
+/*ADD IN*/
+
+.bershireFont{
+    display: inline-block;
+    margin: 6px;
+    font-family: BerkshireSwash, sans-serif;
+    font-size: 135%;
+    color: var(--strongorange);
+    line-height: 135%;
+}
+.PattayaFont{
+    display: inline-block;
+    margin: 20px;
+    font-family: Pattaya, sans-serif;
+    font-size: 165%;
+}
+.text-normal{
+    font-family: Poppins-SemiBold, sans-serif;
+    font-weight: bold;
+    font-size: 90%;
+    color: #555555;
+}
+
+/**/
+
+.strong-points{
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-auto-rows: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: url("../images/background/seamless-doodle-ingredients.jpg") fixed center;
+    background-size: 23%;
+}
+.strong-points > div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    background: rgba(42, 42, 42, 0.93);
+
+}
+
+.strong-points > div:hover .point-icon{
+    transform: scale(1.30);
+    color: #28af62;
+    text-shadow: 0 0 3px rgba(0, 255, 110, 0.69);
+
+}
+.point-icon{
+    color: #fefefe;
+    font-size: 33px;
+    transition: 350ms;
+}
+.strong-points h4{
+    color: #28af62;
+    margin-top: 10px;
+    font-size: 110%;
+    font-family: Poppins-SemiBold, sans-serif;
+
+}
+
+/**/
+
+.introduce-home{
+    width: 100%;
+    display: grid;
+    position: relative;
+    margin: 30px 0 0;
+    border-bottom: 1px dashed grey;
+    border-top: 1px dashed grey;
+    padding: 50px 10%;
+}
+.introduce-banner{
+    display: flex;
+    position: absolute;
+    background: url("../images/background/floating-ingredient.png") no-repeat fixed left center;
+    background-size:38%;
+    height: 100%;
+    width: 100vW;
+    z-index: -1;
+    animation: showingUp reverse 500ms;
+}
+@keyframes showingUp {
+    100%{opacity: 0}
+    0% {opacity: 1}
+}
+
+.introduce-content{
+    margin-left: 43%;
+    margin-top: 10px;
+}
+.intro-text{
+    margin: 25px auto;
+    background: url("../images/background/homepage-bg.png") scroll center no-repeat;
+    background-size: contain;
+    height: 475px;
+    display: flex;
+    align-items: center;
+
+}
+.intro-text h1{
+    position: absolute;
+    left: 11%;
+    width: 33%;
+    text-align: center;
+    font-size: 265%;
+    font-family: BerkshireSwash, sans-serif;
+    color: var(--sidered);
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(210, 210, 210, 0.1);
+    border-radius: 15px;
+    text-shadow: 0 0 3px rgba(213, 50, 50, 0.8),
+                0 0 8px rgba(213, 50, 50, 0.2);
+}
+.introduce-content .intro-title, .home-sandwich-title{
+    font-size: 160%;
+    margin: 5px 10px;
+    text-align: center;
+    font-family: Poppins-SemiBold, sans-serif;
+    color: #555555;
+}
+
+.pizzaHome, .sandwichHome{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    --homeSpacing : 39px;
+    --homeColumns: 3;
+    margin-left: calc(-1 * var(--homeSpacing)) ;
+}
+.home-product-wrapper, .home-sandwich-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 13px 0 15px var(--homeSpacing);
+    width: calc(calc(100% / var(--homeColumns)) - var(--homeSpacing));
+    animation: menu-home 350ms reverse;
+}
+.home-product{
+    height: 100%;
+}
+.home-product-img{
+    position: relative;
+    display: flex;
+    transition: 200ms;
+}
+.home-product-img:hover .home-overlay {
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+}
+.home-product-img .home-overlay{
+    position: absolute;
+    top: 0;
+    /*bottom: 100%;*/
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    opacity: 0;
+    transition: 500ms ease;
+    border-radius: 10px ;
+    padding: 10px;
+    font-weight: bold;
+    word-break: break-word;
+    font-size: 100%;
+    background-color: rgba(85, 85, 85, 0.8);
+    color: white;
+}
+.home-product-img .home-overlay h4{
+    font-family: Poppins-SemiBold, sans-serif;
+    color: var(--gold);
+    font-size: 105%;
+}
+
+.home-product-img .home-overlay .ingredient-text{
+    font-size: 78%;
+}
+
+.home-product-img img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.home-product:hover{
+    cursor: pointer;
+    opacity: 95%;
+}
+.home-product:hover .home-product-img{
+    transform: scale(1.08);
+}
+.home-product:hover .home-product-name{
+    color: var(--sidered);
+}
+.home-product-name{
+    margin: 15px;
+    font-size: 20px;
+    text-align: center;
+    font-family: PermanentMarker, sans-serif;
+    font-weight: initial;
+    color: #555555;
+}
+
+.goToMenu-wrapper{
+    margin: 30px 0 10px;
+    text-align: center;
+}
+.goToMenuBtn{
+    font-size: 135%;
+    border-radius: 8px;
+    color: white;
+    font-family: Poppins-ExtraBold, sans-serif;
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #f12711, #f5af19);
+}
+.goToMenuBtn:hover{
+    background: linear-gradient(270deg, #f12711, #f5af19);
+    text-shadow: 1px 1px 1px var(--darkred);
+}
+
+
+/* HOME SANDWICH*/
+.home-sandwich{
+    display: grid;
+    position: relative;
+    border-top: 1px dashed #555555;
+    border-bottom: 1px dashed #555555;
+    width: 100%;
+    padding: 25px 10%;
+
+}
+.home-sandwich-banner{
+    padding-top: 50px;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../images/background/flying-burger.png") no-repeat fixed right center;
+    background-size: 36%;
+    z-index: -1;
+}
+
+.home-sandwich-content{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 43% 20px 0;
+
+}
+.home-sandwich-title{
+    text-align: center;
+}
+
+/*Clients Review*/
+
+.client-reviews{
+    position: relative;
+    margin: 55px 10%;
+    display: grid;
+    grid-template-columns: 23% 75%;
+    justify-content: space-between;
+
+}
+.cr-box{
+    display: flex;
+    flex-direction: column;
+}
+.child-box{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: start;
+    transition: 800ms;
+    padding: 20px;
+    background: url("../images/testimonial-background/testimonial-bg-light.jpg");
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px 1px grey;
+}
+.info-box{
+   text-align: center;
+}
+.client-img img{
+    width: 139px;
+    border-radius: 10px;
+}
+.client-name h3{
+    font-family: Poppins-ExtraBold, sans-serif;
+    color: #555555;
+}
+.client-said{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    line-height: 135%;
+}
+
+.client-interact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.client-interact h5{
+    font-family: BerkshireSwash, sans-serif;
+    color: var(--strongorange);
+    font-size: 130%;
+    margin-bottom: 15px;
+}
+.client-interact h3{
+    font-size: 150%;
+    color: #555555;
+    font-family: Poppins-ExtraBold, sans-serif;
+}
+.client-interact h4{
+    font-size: 210%;
+    color: var(--strongorange);
+    font-family: Poppins-ExtraBold, sans-serif;
+}
+
+.review-buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: right;
+}
+.review-buttons button{
+    margin: 0 10px;
+    padding: 8px 18px;
+    background: var(--lightorange); border-radius: 5px;
+    color: var(--darkred);
+    font-family: Poppins-SemiBold, sans-serif;
+    font-size: 100%;
+    cursor: pointer;
+}
+.review-buttons button:hover{
+    background: var(--sidered);
+    color: white;
+}
+.review-buttons button:active{
+    transform: scale(1.05);
+}
+
+@keyframes menu-home {
+    100% { transform:scale(0.85); opacity: 0.69}
+    0% { transform:scale(1); opacity: 1}
+}
+
+@media screen and (max-width : 1200px ){
+    .strong-points{
+        grid-template-columns: 48% 48%;
+        height: auto;
+        background-size: 35%;
+        padding: 30px 5%;
+    }
+    .introduce-home, .home-sandwich{
+        margin: 0;
+        padding: 0 10% 30px;
+    }
+    .introduce-banner, .home-sandwich-banner{
+        margin-top: 50px;
+        background-size: 40%;
+        background-attachment: scroll;
+        background-position: top center;
+        animation: none;
+    }
+    .introduce-content{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: calc(60%);
+    }
+    .home-sandwich-content{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: calc(75%);
+    }
+    .pizzaHome, .sandwichHome{
+        margin-top: 30px;
+        --homeSpacing: 35px;
+        --homeColumns: 3;
+    }
+    .home-product-img .home-overlay h4{
+        font-size: 85%;
+    }
+    .home-product-name{
+        font-size: 22px;
+    }
+
+    .intro-text{
+        background-size: 100% ;
+        height: 200px;
+    }
+    .intro-text h1{
+        font-size: 180%;
+    }
+    .client-reviews{
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-interact{
+        text-align: center;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    .child-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-box{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 640px ){
+    .strong-points{
+        grid-template-columns: 100%;
+        height: auto;
+        background-size: 65%;
+    }
+    .introduce-home{
+        grid-template-rows: 30% 70%;
+    }
+    .introduce-banner, .home-sandwich-banner{
+        margin-top: 50px;
+        background-size: 65%;
+        background-attachment: scroll;
+        background-position: top center;
+        animation: none;
+    }
+    .introduce-content{
+        margin-top: calc(100%);
+    }
+
+    .home-sandwich-content{
+        margin-top: calc(120%);
+    }
+    .pizzaHome, .sandwichHome{
+        margin-top: 20px;
+        --homeSpacing: 50px;
+        --homeColumns: 2;
+    }
+
+    .home-product-img .home-overlay h4{
+        font-size: 95%;
+    }
+    .home-product-img .home-overlay .ingredient-text{
+        font-size: 95%;
+    }
+
+    .home-product-name{
+        font-size: 25px;
+    }
+    .intro-text h1{
+        font-size: 130%;
+    }
+    .client-said{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 500px ){
+    .pizzaHome, .sandwichHome{
+        --homeSpacing: 0;
+        flex-direction: column;
+        height: 450px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+
+    }
+    .home-product-wrapper, .home-sandwich-wrapper{
+        margin: 0 35px 0 35px;
+        scroll-snap-align: center;
+        max-width: 100vW;
+    }
+    .home-product:hover .home-product-img{
+        transform: scale(1);
+    }
+    .introduce-content .intro-title, .home-sandwich-title{
+        font-size: 130%;
+    }
+
+    .intro-text{
+        background: none;
+        height: auto;
+        font-size: 125%;
+    }
+    .intro-text h1{
+        position: initial;
+        width: 100%;
+        left: 0;
+    }
+    .home-product-img .home-overlay h4{
+        font-size: 150%;
+    }
+    .home-product-img .home-overlay .ingredient-text{
+        font-size: 135%;
+        line-height: initial;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .pizzaHome, .sandwichHome{
+        height: 380px;
+        flex-direction: column;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+
+    }
+    .home-product-wrapper, .home-sandwich-wrapper{
+        margin: 0 10px 0 10px;
+        scroll-snap-align: center;
+    }
+    .introduce-content .intro-title, .home-sandwich-title{
+        font-size: 110%;
+    }
+}
+
+
+@media (hover: hover) {
+    .home-product-img:hover .home-overlay{
+        height: 100%;
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+    }
+
+
+}

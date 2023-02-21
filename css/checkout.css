@@ -1,0 +1,157 @@
+
+.checkout-wrapper{
+    margin: 0 10% 50px;
+}
+
+.checkout-content{
+    margin: 100px 0 30px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    color: #3c3c3c;
+}
+.checkout-content div{
+    margin: 0 10px;
+}
+.billing-details .co-error{
+    margin-top: 6px;
+    color: var(--sidered);
+}
+.billing-details-title, .order-details-title {
+    margin-bottom: 30px;
+    font-family: Poppins-SemiBold, sans-serif;
+}
+.billing-form{
+    padding: 10px 0;
+}
+.billing-form div{
+    margin-bottom: 18px;
+}
+.billing-form div > label{
+    display: block;
+    margin-bottom: 5px;
+}
+.billing-form div > label:after{
+    content: '*';
+    padding: 0 5px;
+    color: var(--sidered);
+}
+.billing-form div:nth-child(5) > label:after{
+    content: '';
+}
+
+.billing-form div > input, .billing-form div > select, .billing-form div > textarea{
+    width: 89%;
+    padding: 10px;
+    border-radius: 3px;
+    background: white;
+    border: 1px solid grey;
+    resize: none;
+}
+.billing-form div > input:focus, .billing-form div > textarea:focus{
+    border: 1px solid transparent;
+    outline: 2px solid var(--lightorange);
+}
+
+.checkout-payment table{
+    width: 100%;
+    line-height: 160%;
+    background: #eaeaea;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.checkout-payment table tr{
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    justify-items: left;
+}
+
+.checkout-payment .titles-co{
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+.checkout-payment .p-co{
+    padding: 3px 0 5px;
+}
+.checkout-payment .subtotal-co{
+    border-top: 1px solid grey;
+    padding-top: 5px;
+}
+.checkout-payment .vat-co{
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+.checkout-payment .total-co{
+    padding-top: 5px;
+}
+.checkout-payment .total-co th:nth-child(2){
+    color: var(--sidered);
+}
+
+.payment-method-box h3{
+    margin:10px 0;
+}
+.payment-method-box div{
+    margin: 10px 0;
+}
+.payment-method-box > div > input[type = 'radio']{
+    height: 18px;
+    width: 18px;
+}
+.payment-method-box > div > label{
+    margin-left: 6px;
+    cursor: pointer;
+}
+ .walletIcon a , .creditIcon a {
+     display: inline-block;
+     height: 40px;
+}
+.bankIcon a{
+    display: inline-block;
+    height: 80px;
+}
+ .walletIcon a img, .creditIcon a img, .bankIcon a img{
+    height: 100%;
+}
+.method-content{
+    background: #eaeaea;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.links{
+    text-decoration: none;
+    color: var(--sidered);
+}
+.acceptTerm{
+    line-height: 150%;
+}
+
+.co-submit-box{
+    padding: 30px 10px ;
+    text-align: center;
+}
+#co-submit{
+    font-weight: bold;
+    color: white;
+    background: var(--sidered);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .checkout-wrapper {
+        margin: 0 3.5%;
+    }
+    .checkout-content{
+        grid-template-columns: 100%;
+    }
+    .checkout-payment table{
+        padding: 10px;
+    }
+    .billing-form div > input, .billing-form div > select, .billing-form div > textarea{
+        width: 100%;
+    }
+}

@@ -1,0 +1,304 @@
+
+/*Content*/
+
+.about-wrapper{
+    background: url("../images/background/leaf-floating.jpg") fixed center;
+    background-size: contain;
+    z-index: -10;
+    padding: 0 0 100px;
+}
+
+.about-headline h1{
+    text-align: center;
+    margin: 0 10%;
+    padding: 50px 0;
+    font-family: Poppins-ExtraBold, sans-serif;
+    color: #3c3c3c;
+
+}
+
+.about-who {
+    margin: 0 10%;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    border-radius: 12px;
+    border: 3px double #555555;
+    position: relative;
+    z-index: 1;
+}
+.about-who:hover .about-who-content h1{
+    letter-spacing: 1px;
+}
+.about-who:hover{
+   text-shadow: 0 0 2px white;
+}
+.about-who-bg{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    background: url("../images/background/home-bg.png") no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+.about-who-content h1{
+    font-family: Poppins-ExtraBold, sans-serif;
+}
+.about-who-content p{
+    font-size: 110%;
+    background: rgba(0, 0, 0, 0.65);
+    margin: 25px 8%;
+    padding: 30px 15px;
+    border-radius: 10px;
+    line-height: 150%;
+}
+
+.middle-box{
+    padding: 50px 10%;
+}
+.about-what{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed gray;
+}
+
+.about-what h1 {
+    font-family: Poppins-SemiBold, sans-serif;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.stand-for-box {
+    margin: 40px auto 50px;
+    display: grid;
+    grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+    justify-content: space-between;
+}
+
+.what-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 3px lightgrey;
+
+}
+
+.what-card div:first-child{
+   height: 130px;
+}
+.what-card div:last-child{
+    flex-shrink: 1;
+}
+
+.what-card:hover{
+    background: rgba(63, 63, 63, 0.5);
+    color: white;
+    box-shadow: 0 0 10px 2px grey;
+    transform: scale(1.03);
+}
+.what-card div h3{
+    font-family: Poppins-SemiBold, sans-serif;
+    padding-bottom: 5px;
+}
+.what-card-icon img{
+    height: 90px;
+}
+
+.upto {
+    margin: 100px 0 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.upto-icon{
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+.upto-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.upto-header h1{
+    color: #3c3c3c;
+    font-family: Poppins-SemiBold, sans-serif;
+}
+
+.upto-card {
+    width: 30%;
+    text-align: center;
+    padding: 50px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255);
+    border-radius: 12px;
+    opacity: 72%;
+    box-shadow: 0 0 10px 1px lightgray;
+}
+.upto-card:hover{
+    transform: scale(1.02);
+    background: rgba(217, 217, 217, 0.5);
+    opacity: 100%;
+    box-shadow: 0 0 15px 2px #b9b9b9;
+}
+.upto-card p{
+    font-weight: bold;
+}
+.upto-card:hover p, .upto-card:hover div{
+    color: black;
+}
+.upto-card:hover h1{
+    color: var(--sidered);
+}
+.upto-card h1 {
+    font-size: x-large;
+    font-family: Poppins-SemiBold, sans-serif;
+    color: var(--darkred);
+    margin-bottom: 15px;
+}
+
+.upto-card button {
+    width: 40%;
+    height: 40px;
+    margin: 50px auto 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #F90000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.upto-card button:hover{
+    background: var(--lightorange);
+}
+.upto-card button:hover a{
+    color: var(--darkred);
+}
+.upto-card a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.about-why {
+    margin: 50px 0 0;
+    border-radius: 32px;
+    position: relative;
+    z-index: 1;
+}
+.about-why-bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("../images/background/erol-ahmed-IHL-Jbawvvo-unsplash.png") center;
+    background-size: cover;
+}
+
+.about-why-text {
+    padding: 50px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: black;
+
+}
+.about-why-text h1, .about-why-text button, .about-why-text a, .about-why-text p{
+    z-index: 1;
+}
+.about-why-text h1{
+    font-family: Poppins-SemiBold, sans-serif;
+}
+.about-why-text p{
+    font-size: 125%;
+    margin: 10px 0 ;
+}
+.about-why-text button {
+    padding: 10px 15px;
+    margin: 30px auto 0;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--sidered);
+    cursor: pointer;
+    font-size: 1.4rem;
+
+}
+.about-why-text button:hover{
+    background: var(--lightorange);
+
+    text-shadow: 1px 1px 1px var(--darkred);
+}
+.about-why-text button:hover a{
+    color: var(--darkred);
+    text-shadow: 1px 1px 1px var(--strongorange);
+}
+
+.about-why-text a {
+    text-transform: uppercase;
+    font-family: Poppins-SemiBold, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-why-image {
+    border-radius: 0 0 10px 10px;
+    padding: 5px 20px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.about-why-image img {
+    width: 100px;
+    height: 100px;
+}
+.about-why-image img:last-child{
+    width: 80px;
+    height: 80px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .middle-box{
+        background-size: contain;
+    }
+    .stand-for-box{
+        grid-template-columns: 49% 49%;
+    }
+    .what-card{
+        margin: 15px 0;
+    }
+    .upto-card{
+        width: 100%;
+        margin: 25px 0  ;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .stand-for-box{
+        grid-template-columns:100%;
+    }
+    .about-why-text {
+        padding-top: 130px;
+    }
+}
+
+

@@ -1,0 +1,141 @@
+.stores-header{
+    text-align: center;
+    font-family: Poppins-ExtraBold, sans-serif;
+    color: #3c3c3c;
+    margin-bottom: 65px;
+}
+
+.iframe-map {
+    border: 1px solid #313131; border-radius: 5px;
+    box-shadow: 0 0 3px 2px lightgrey inset,
+        0 0 5px 1px gray;
+    padding: 5px;
+    width: 100%;
+
+}
+.stores-box{
+    padding: 50px 10%;
+    position: relative;
+
+}
+
+.stores-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100%;
+}
+
+.stores-textbox{
+    text-align: center;
+}
+.stb-title{
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: Poppins-SemiBold, sans-serif;
+    color: #3c3c3c;
+}
+
+.stores-form label{
+    display: block;
+}
+.stores-form select{
+    width: 100%;
+    font-size: 16px; font-weight: bold;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    border: 1px solid gray; border-radius: 5px;
+    background: white;
+}
+.stores-form option:hover{
+    background: var(--sidered);
+}
+#city,#district{
+    display: none;
+}
+
+#submitLocation{
+    display: block; margin: 10px auto 10px;
+    cursor: pointer;
+    font-size: 100%; font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid var(--sidered);
+    background: var(--sidered);
+    font-family: Poppins-SemiBold, sans-serif;
+}
+#submitLocation:hover{
+    text-shadow:1px 1px 1px rgba(142, 21, 4, 0.5);
+    background: var(--lightorange); color:var(--darkred);
+    border: 1px solid var(--lightorange);
+}
+#submitLocation:active{
+    transform: scale(1.03);
+}
+
+.stores-details{
+    overflow-y: scroll;
+    height: 495px;
+    padding: 0 15px;
+    scroll-snap-type: y mandatory;
+}
+.stores-card{
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid black; border-radius: 5px;
+    scroll-snap-align: start;
+}
+.stores-card h4{
+    font-family: Poppins-SemiBold, sans-serif;
+    color: var(--mainred);
+}
+.stores-card h5{
+    line-height: 165%;
+    letter-spacing: 0.05rem;
+}
+.stores-card a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 1200px){
+    .stores-content{
+        gap: 30px;
+    }
+    .iframe-map{
+        height: 618px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .stores-box{
+        padding: 35px 5%;
+    }
+    .stores-content{
+        grid-template-columns: 100%;
+    }
+    .iframe-map{
+        height: 450px;
+    }
+    .stores-textbox{
+        margin-top: 50px;
+    }
+    .stores-details{
+        height: 295px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .stores-box{
+        padding: 20px 2%;
+    }
+    .iframe-map{
+        height: 350px;
+    }
+    .stores-textbox{
+        margin-top: 30px;
+    }
+    .stores-form select{
+        width: 90%;
+    }
+}

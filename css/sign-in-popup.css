@@ -1,0 +1,289 @@
+/*Sign in pop-up*/
+    /*Background pop-up*/
+    .account-details{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top:0; left: 0;
+        display: none;
+        z-index: 99999;
+        color: black;
+
+    }
+    .popup-signIn-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0; left: 0;
+        background: rgba(0, 0, 0, 0.65);
+    }
+    /*Popup Box*/
+    .signIn-form{
+        background-color: white; border-radius: 5px;
+        margin: 0 auto;
+        align-self: center;
+        max-height: calc(100% - 30px);
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        animation: pop-up 600ms reverse ease-in-out;
+    }
+    @keyframes pop-up {
+        100%    {opacity: 0; transform: translateY(-50%)}
+        0%      {opacity: 1; transform: translateY(0)}
+    }
+    #account-close{
+        position: absolute;
+        right: 13px; top: 8px;
+        color: black;
+        font-size: 35px; font-weight: bolder;
+    }
+    #account-close:hover{
+        cursor: pointer;
+        color: var(--mainred);
+        transform: rotate(180deg);
+        transition: 2s;
+    }
+    /*Inside Popup Box*/
+    .membership-banner{
+        width: 100%;
+    }
+    .membership-banner img{
+        width: 100%;
+        border-radius: 5px 0 0 5px  ;
+    }
+    .signIn-box{
+        margin-top: 25px;
+    }
+    .signIn-title{
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 0 50px;
+        line-height: 23px;
+        font-size: 16px;
+
+    }
+    .signIn-title h2{
+        padding: 10px;
+        font-weight: bolder;
+        color: var(--mainred);
+        font-family: Poppins-SemiBold, sans-serif;
+    }
+
+    .signIn{
+        margin: 20px;
+        border-radius: 5px; border: 1px solid black;
+    }
+    .signIn h3{
+        position: absolute;
+        transform: translate(180px,-13px);
+        display: inline-block;
+        background-color: white;
+        padding: 0 5px 0;
+        color: var(--mainred);
+        font-family: Poppins-SemiBold, sans-serif;
+    }
+    .form-box{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-box div{
+        margin: 5px 0;
+    }
+    .email, .password{
+        text-align: center;
+        width: 100%;
+    }
+    .email input,.password input{
+        background-color: white;
+        border: 1px solid grey; border-radius: 2px;
+        padding: 15px 50px 15px 15px;
+        outline: grey;
+        font-size: 16px;
+    }
+    .email input:focus + label,.email input:valid + label
+    ,.password input:focus + label,.password input:valid + label {
+        top:-15% ; left: 20%;
+        font-size: 13px; font-weight: bold;
+        background-color: white; padding: 0 5px 0;
+        opacity: 100%;
+        color: var(--mainred);
+    }
+    .signIn-form .field{
+        position: relative;
+    }
+    .signIn-form .field > label{
+        display: block;
+        position: absolute;
+        top: 35%; left: 18.5%;
+        transition: 300ms;
+        opacity: 60%;
+        pointer-events: none;
+
+    }
+    .password{
+        position: relative;
+    }
+    .password i{
+        position: absolute;
+        background: white;
+        opacity: 60%;
+        cursor: pointer;
+        font-size: 22px;
+        top: 25%;
+        right: 19%;
+    }
+    .saved-pass{
+        margin: 0 !important;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .saved-pass a{
+        margin-left: 69px;
+        text-decoration: none;
+        color: var(--mainred);
+    }
+    .submit{
+        display: block;
+        margin: 5px auto 15px; padding: 8px 15px;
+        background-color: var(--sidered);
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+    .submit a{
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .to-signUp{
+        color: #6a6a6a;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .to-signUp a{
+        font-size: 19px; font-weight: bold;
+        text-decoration: none;
+        color: var(--mainred);
+        font-family: Poppins-SemiBold, sans-serif;
+    }
+    .to-signUp a:hover{
+        text-shadow: 0 0 2px var(--sidered),
+        0 0 20px var(--sidered);
+    }
+
+    @media screen and (min-width: 1200px){
+        .signIn-form {
+            width: 1050px;
+            height: 525px;
+        }
+        .email input,.password input{
+            width: 70%;
+
+        }
+    }
+    @media screen and (max-width: 1200px) and (min-width: 640px){
+        .signIn-title{
+            font-size: 18px;
+        }
+        .signIn-title h2{
+            font-size: 28px;
+        }
+        .membership-banner{
+            display: none;
+        }
+        .signIn-form {
+            width: 600px;
+            grid-template-columns: 100%;
+            padding: 15px;
+        }
+        .signIn h3{
+            transform: translate(230px,-13px);
+        }
+        .email input,.password input{
+            width: 70%;
+        }
+        .email input:focus + label,.email input:valid + label
+        ,.password input:focus + label,.password input:valid + label {
+            font-size: 15px;
+        }
+        .signIn-form .field > label{
+            top: 30%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .password i{
+            font-size: 25px;
+            right: 18%;
+        }
+        .signIn h3{
+            font-size: 23px;
+        }
+        .saved-pass{
+            font-size: 17px;
+        }
+        .to-signUp{
+            font-size: 17px;
+        }
+    }
+    @media screen and (max-width: 640px){
+        .signIn-form{
+            display: flex;
+            margin: 0 20px;
+            justify-content: center;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .membership-banner{
+            display: none;
+        }
+        .signIn-title{
+            padding: 0 15px;
+            font-size: 13px;
+            line-height: initial;
+        }
+        .signIn-title h2{
+            padding: 5px 0;
+        }
+        .signIn{
+            margin: 30px 25px;
+        }
+        .signIn h3{
+            font-size: 16px;
+            transform: translate(40px,-10px);
+        }
+        .form-box div{
+            margin: 7px 0;
+        }
+        .email input,.password input{
+            width: 80%;
+            font-size: 15px;
+        }
+        .saved-pass{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .saved-pass a{
+            margin-left: 0;
+        }
+        .password i{
+            font-size: 1rem;
+            right: 15%;
+            top:33%;
+        }
+        .blah{
+            display: none;
+        }
+        .submit{
+            font-size: 15px;
+        }
+        .to-signUp a{
+            font-size: 15px;
+        }
+    }
+
+

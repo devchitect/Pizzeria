@@ -1,0 +1,123 @@
+.slider{
+    position: relative;
+    background: #fefefe;
+  }
+.slide{
+    padding: 65px 0;
+    margin:0 10%;
+}
+
+.slide .imgBanner{
+    animation: zoomin 10s linear;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+    /* auto zoom  */
+    @-webkit-keyframes zoomin {
+        0% {transform: scale(1)}
+        100% {transform: scale(1.25)}
+    }
+
+
+    @keyframes zoomin {
+        0% {transform: scale(1)}
+        100% {transform: scale(1.25)}
+    }
+
+.control{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .prev:hover, .next:hover{
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5),  rgba(255, 255, 255, 0.5));
+      color: var(--strongorange);
+      text-shadow: 0 0 5px var(--sidered);
+      cursor: pointer;
+  }
+  .prev{
+      padding-left: 10px;
+      padding-right: 30px;
+      left: 0;
+      color: gray;
+  }
+  .next{
+      padding-left: 30px;
+      padding-right: 10px;
+      right: 0;
+      color: gray;
+  }
+  .dotsbox{
+      position: absolute;
+      bottom: 0;
+      padding: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .dot{
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border: 8px double gray;
+      border-radius: 50%;
+      margin: 0 8px;
+      cursor: pointer;
+  }
+  .active, .dot:hover{
+      border-color: var(--strongorange);
+      box-shadow: 0 0 5px 1px orange;
+  }
+  .fade {
+      animation: fade 1s ;
+
+    }
+    @-webkit-keyframes fade {
+        0% {opacity: 0.77}
+        100% {opacity: 1}
+    }
+
+
+    @keyframes fade {
+        0% {opacity: 0.77}
+       100% {opacity: 1}
+    }
+
+
+
+@media screen and (max-width: 1200px){
+      .next,.prev{
+          font-size: 35px;
+      }
+    .slide{
+        padding: 30px 0 50px;
+        margin:0 2%;
+    }
+
+    .slide .imgBanner{
+        animation: none;
+    }
+  }
+    @media screen and (max-width: 640px){
+        .myslide{
+            padding: 25px 0;
+            margin: 3%;
+        }
+        .myslide .imgBanner{
+            animation: none;
+        }
+        .next,.prev{
+            font-size: 25px;
+        }
+        .dotsbox{
+            padding: 2px;
+        }
+        .dot{
+            margin: 0 7px;
+        }
+
+    }

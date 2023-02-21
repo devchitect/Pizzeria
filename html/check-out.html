@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check-Out</title>
+</head>
+
+<body>
+<div class="checkout-wrapper">
+    <div class="progress-bar">
+        <div id="now-cart">
+            <div >1</div>
+            <div class="text-active" >Cart</div>
+        </div>
+
+        <div class="bi bi-chevron-double-right"></div>
+
+        <div id="now-checkout">
+            <div >2</div>
+            <div class="text-active">Checkout</div>
+        </div>
+
+        <div class="bi bi-chevron-double-right"></div>
+
+        <div id="order-completed">
+            <div class="bg-unactive">3</div>
+            <div>Complete</div>
+        </div>
+    </div>
+
+    <form action="#!order-complete" name="checkoutForm" id="checkoutForm" method="post">
+        <div class="checkout-content">
+
+            <div class="billing-details">
+                <h2 class="billing-details-title">Billing Details</h2>
+                <div class="billing-form" >
+
+                    <div>
+                        <label for="co-full-name">Full Name</label>
+                        <input type="text" name="name" id="co-full-name" ng-model="name" required>
+                        <div class="co-error" ng-show="checkoutForm.name.$touched && checkoutForm.name.$invalid">
+                            <small>This field is required.</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="co-address">Address</label>
+                        <input type="text" name="address" id="co-address" ng-model="address" required>
+                        <div class="co-error" ng-show="checkoutForm.address.$touched && checkoutForm.address.$invalid">
+                            <small>This field is required.</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="co-phone">Phone</label>
+                        <input type="text" name="phone" id="co-phone" ng-model="phone" required>
+                        <div class="co-error" ng-show="checkoutForm.phone.$touched && checkoutForm.phone.$invalid">
+                            <small>This field is required.</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="co-email">Email</label>
+                        <input type="email" name="email" id="co-email" ng-model="email" required>
+                        <div><small class="co-error error-email"></small></div>
+                        <div class="co-error" ng-show="checkoutForm.email.$touched && checkoutForm.email.$invalid">
+                            <small>This field is required (valid form).</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Additional Information</h4>
+                        <label for="add-info">Order Notes (Optional)</label>
+                        <textarea name="add-info" id="add-info" cols="30" rows="8"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="checkout-payment">
+                <h2 class="order-details-title">Your Order</h2>
+                <table>
+                    <tr class="titles-co">
+                        <th>Product</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr ng-repeat="p in cartList" class="p-co">
+                        <td>{{p.name}} <span class="textColor-red">{{"x " + p.amount}}</span>
+                            <br> (<span class="textColor-red">{{"Size " + p.size}}</span>)
+                        </td>
+
+                        <td>{{p.price * p.amount | currency}}</td>
+                    </tr>
+
+                    <tr class="subtotal-co">
+                        <th>Subtotal</th>
+                        <td>{{totalCartPrice | currency}}</td>
+                    </tr>
+                    <tr class="shipping-co">
+                        <th>Shipping</th>
+                        <td>{{shippingCost | currency}}</td>
+                    </tr>
+                    <tr class="discount-co">
+                        <th>Discount</th>
+                        <td>{{discount | currency}} (-)</td>
+                    </tr>
+                    <tr class="vat-co">
+                        <th>VAT</th>
+                        <td>{{taxCost | currency}}</td>
+                    </tr>
+
+                    <tr class="total-co">
+                        <th>Total</th>
+                        <th>{{ totalPriceAfterward | currency}}</th>
+                    </tr>
+                </table>
+
+                <div class="payment-method-box">
+                    <h3>Payment Method:</h3>
+                    <div class="cashPayment">
+                        <input type="radio" name="payment" id="cash" value="cash" ng-click="paymentMethod = 'Cash on Delivery'">
+                        <label for="cash">Cash On Delivery</label>
+                        <div ng-if="paymentMethod ==='Cash on Delivery'" class="method-content">
+                            <h4>Pay with cash upon Delivery.</h4>
+                        </div>
+                    </div>
+                    <div class="digitalWalletPayment">
+                        <input type="radio" name="payment" id="digitalWallet" value="digitalWallet" ng-click="paymentMethod = 'Digital Wallet'">
+                        <label for="digitalWallet">Digital Wallet</label>
+                        <div ng-if="paymentMethod ==='Digital Wallet'" class="method-content">
+                            <h4>Pay with your digital Wallet:</h4>
+                            <div class="walletIcon">
+                                <a href=""><img src="images/payments/Momo.png" alt=""></a>
+                                <a href=""><img src="images/payments/Zalo-pay.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bankTransferPayment">
+                        <input type="radio" name="payment" id="bank" value="bankTransfer" ng-click="paymentMethod = 'Bank Transfer'">
+                        <label for="bank">Bank Transfer</label>
+                        <div ng-if="paymentMethod === 'Bank Transfer'" class="method-content">
+                            <h4>Pay by bank transfer:</h4>
+                            <div class="bankIcon">
+                                <a href=""><img src="images/payments/standardC.png" alt=""></a>
+                                <a href=""><img src="images/payments/hsbc.png" alt=""></a>
+                                <a href=""><img src="images/payments/mbbank.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="creditPayment">
+                        <input type="radio" name="payment" id="credit" value="credit" ng-click="paymentMethod = 'Credit Card'">
+                        <label for="credit">Credit Card</label>
+                        <div ng-if="paymentMethod === 'Credit Card'" class="method-content">
+                            <h4>Pay with credit card:</h4>
+                            <div class="creditIcon">
+                                <a href=""><img src="images/payments/Visa.png" alt=""></a>
+                                <a href=""><img src="images/payments/MasterCard.png" alt=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="acceptTerm">
+                        <p>
+                            Your personal data will be used to process your order,
+                            support your experience throughout this website,
+                            and for other purposes described in our <a href="#!policy" class="links">privacy policy</a>.
+                        </p>
+                        <input type="checkbox" id="acceptTerm" required>
+                        <label for="acceptTerm">I have read and agree to the website
+                            <a href="#!policy" class="links">Terms and Conditions</a>.</label>
+                    </div>
+                    <div class="co-submit-box"><button type="submit" id="co-submit">Place Order</button></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

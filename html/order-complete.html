@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="order-complete-wrapper">
+        <div class="progress-bar">
+            <div id="now-cart">
+                <div >1</div>
+                <div class="text-active" >Cart</div>
+            </div>
+
+            <div class="bi bi-chevron-double-right"></div>
+
+            <div id="now-checkout">
+                <div >2</div>
+                <div class="text-active">Checkout</div>
+            </div>
+
+            <div class="bi bi-chevron-double-right"></div>
+
+            <div id="order-completed">
+                <div>3</div>
+                <div class="text-active">Complete</div>
+            </div>
+        </div>
+
+        <div class="finish-order">
+            <div class="fo-title">
+                <h2>Order completed.</h2>
+                <h2>Thank you for your order!</h2>
+            </div>
+            <div class="order-details">
+                <div class="logo-fo"><img src="images/logo.png" alt=""></div>
+                <h3>Order Details:</h3>
+                <div>
+                    <div>
+                        <span>Customer Name:</span>
+                        <span>{{name}}</span>
+                    </div>
+                    <div>
+                        <span>Phone:</span>
+                        <span>{{phone}}</span>
+                    </div>
+                    <div>
+                        <span>Email:</span>
+                        <span>{{email}}</span>
+                    </div>
+                    <div>
+                        <span>Address:</span>
+                        <span>{{address}}</span>
+                    </div>
+                </div>
+
+               <div class="fo-product">
+                   <div>
+                       <span>Payment Method:</span>
+                       <span>{{paymentMethod}}</span>
+                   </div>
+
+                   <table class="product-table">
+                       <tr>
+                           <th>Product</th>
+                           <th>Subtotal</th>
+                       </tr>
+                       <tr ng-repeat="p in productInCart" >
+                           <td><span>{{p.name}}</span> <span>{{"size " + p.size}}</span> <span>({{"x" + p.amount}})</span>
+
+                           </td>
+
+                           <td>{{p.price * p.amount | currency}}</td>
+                       </tr>
+
+                       <tr>
+                           <th>Subtotal</th>
+                           <td>{{totalCartP | currency}}</td>
+                       </tr>
+                       <tr >
+                           <th>Shipping</th>
+                           <td>{{shippingCost | currency}}</td>
+                       </tr>
+                       <tr >
+                           <th>Discount</th>
+                           <td>{{discount | currency}} (-)</td>
+                       </tr>
+                       <tr>
+                           <th>VAT</th>
+                           <td>{{taxC | currency}}</td>
+                       </tr>
+
+                       <tr>
+                           <th>Total</th>
+                           <th>{{ totalPAfterward | currency}}</th>
+                       </tr>
+                   </table>
+               </div>
+            </div>
+        </div>
+
+        <div class="fo-btn"><a href="#/!" class="backToHomeBtn" ng-click="goTop()">Go to Homepage!</a></div>
+    </div>
+</body>
+</html>

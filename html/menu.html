@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+</head>
+
+<body>
+    <div>
+        <div class="menu-buy-alert menu-buy-alert-unactive" ng-click="closeMenuAlert()">
+            <h4>The Product has been added to your Cart.</h4>
+        </div>
+
+        <div class="menu">
+
+            <div class="catalog-download">
+                <div class="catalog-toggle bi bi-cloud-download" ng-click="downloadCatalog()"></div>
+                <a href="images/catalog/menu-Catalog.png" download>Download Menu</a>
+            </div>
+
+            <div class="menu-navbar-box">
+                <div class="menu-title">
+                    <div>
+                        <div><h3>Our Menu</h3></div>
+                    </div>
+
+                    <div class="visible-search-box"  id="anchor">
+                        <div><input type="text" ng-model="fakeSearch" ng-keypress="Enter($event,fakeSearch)" ng-change="''" placeholder="Search" class="visible-search"> <button class="icon-search bi bi-search" ng-click="test = fakeSearch; gotoAnchor('anchor')"></button></div>
+                    </div>
+                </div>
+
+                <div class="menu-navbar">
+                    <span class="menu-button" ng-click="search('Pizza')">Pizzas</span>
+                    <span class="menu-button" ng-click="search('Garlic Bread')">Garlic Breads</span>
+                    <span class="menu-button" ng-click="search('Sandwich') ">Sandwiches</span>
+                    <span class="menu-button" ng-click="search('Dessert') ">Desserts</span>
+                    <span class="menu-button" ng-click="search('Beverage')">Beverages</span>
+                    <span class="menu-button" ng-click="search('Combo')">Combo</span>
+                    <input type="text" class="hidden-search" ng-model="test" placeholder="Hidden Search">
+                </div>
+
+            </div>
+
+            <div class="menu-content" id="content">
+
+                <div class="menu-content-inside" >
+                    <ul class="sub-menu">
+                        <li ng-repeat="f in listOfFood | filter: test" class="menu-product-card" ng-controller="menuBuyController" >
+
+                            <div class="product-image-card" >
+                                <div class="product-img">
+                                    <img src={{f.image}} alt="">
+                                    <div class="overlay">
+                                        <div class="text" ng-if="f.ingredient">
+                                            <div ng-if="f.category === 'Combo'">
+                                                <h4>Combo:</h4>
+                                                <div class="ingredients">- {{f.ingredient}}</div>
+                                            </div>
+                                            <div ng-if="f.category !== 'Combo'">
+                                                <h4>Ingredients:</h4>
+                                                <div class="ingredients">- {{f.ingredient}}</div>
+                                            </div>
+                                            <div ng-if="f.category === 'Pizza'">
+                                                <h4 >Size n Price:</h4>
+                                                <div class="detail-size">
+                                                    <span>- {{f.sizeS}} / 20cm / {{f.PriceS | currency}}</span><br>
+                                                    <span>- {{f.sizeM}} / 25cm / {{f.PriceM | currency}}</span><br>
+                                                    <span>- {{f.sizeL}} / 30cm / {{f.PriceL | currency}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-title">
+                                    <h3>{{f.name}}</h3>
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+
+                                <div class="menu-size">
+                                    <h5>Size</h5>
+                                    <div ng-if="f.onePrice === null">
+                                        <span class="size-option" ng-class="{'turn-color': size === f.sizeS}" ng-click="chooseSize(f.sizeS)" ng-if="f.sizeS">{{f.sizeS}}</span>
+                                        <span class="size-option" ng-class="{'turn-color': size === f.sizeM}" ng-click="chooseSize(f.sizeM)" ng-if="f.sizeM">{{f.sizeM}}</span>
+                                        <span class="size-option" ng-class="{'turn-color': size === f.sizeL}" ng-click="chooseSize(f.sizeL)" ng-if="f.sizeL">{{f.sizeL}}</span>
+                                    </div>
+                                    <div ng-if="f.onePrice">
+                                        <span class="size-option" ng-class="{'turn-color': size === f.oneSize}" ng-click="chooseSize(f.oneSize)">{{f.oneSize}}</span>
+                                    </div>
+                                </div>
+                                <div class="menu-amount">
+                                    <h5>Amount</h5>
+                                    <div>
+                                        <button ng-click="decAmount()" >-</button>
+                                        <input class="MenuPAmount"  type="number" name="" id="MenuPAmount" min="1" ng-model="amount"><label for="MenuPAmount"></label>
+                                        <button ng-click="incAmount()" >+</button>
+                                    </div>
+                                </div>
+                                <div class="menu-price">
+                                    <span ng-if="typeof(size) === number" ng-class="{'turn-color': size}">{{sizeMoney * amount | currency}}</span>
+                                    <span ng-if="!size">{{f.PriceS | currency}} - {{f.PriceL | currency}}</span>
+                                    <span ng-if="size && f.onePrice" ng-class="{'turn-color': size === f.oneSize}">{{f.onePrice * amount | currency}}</span>
+                                </div>
+                                <div class="buy-button-box">
+                                    <button id="buy-button" class="buy-button" ng-click="buyItem()" ng-class="{'buy-unactive' : !size}">Buy</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

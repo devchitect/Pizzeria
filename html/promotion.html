@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promotions</title>
+</head>
+<body>
+<ul class="promo-wrapper">
+    <h1 class="promo-header">Our Promotions</h1>
+    <li class="promo" ng-repeat="promo in promotions">
+        <div class="promo-box">
+            <div class="imgPromotion-box">
+                <img class="imgPromotion" src={{promo.img}} alt="">
+            </div>
+            <div class="detailPromotion">
+                <h3 class="contentPromotion">
+                    {{promo.content}}
+                </h3>
+                <div class="codePromotion">
+                    Code: <span>{{promo.code}}</span>
+                </div>
+                <div class="dueTimePromotion">
+                    Due time: {{promo.dueTime}}
+                </div>
+                <div class="specificPromotion">
+                    What is it about: ...
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>
