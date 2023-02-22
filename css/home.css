@@ -484,13 +484,10 @@
         height: 450px;
         overflow-x: scroll;
         overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-
     }
     .home-product-wrapper, .home-sandwich-wrapper{
         margin: 0 35px 0 35px;
-        scroll-snap-align: center;
-        max-width: 100vW;
+        width: 100%;
     }
     .home-product:hover .home-product-img{
         transform: scale(1);
@@ -521,15 +518,9 @@
 @media screen and (max-width: 400px){
     .pizzaHome, .sandwichHome{
         height: 380px;
-        flex-direction: column;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scroll-snap-type: x proximity;
-
     }
     .home-product-wrapper, .home-sandwich-wrapper{
         margin: 0 10px 0 10px;
-        scroll-snap-align: center;
     }
     .introduce-content .intro-title, .home-sandwich-title{
         font-size: 110%;
