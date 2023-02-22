@@ -443,12 +443,8 @@
         overflow-x: scroll;
         overflow-y: hidden;
         flex-direction: column;
-        scroll-snap-type: x proximity;
     }
-    .menu-product-card{
-        scroll-snap-align: center;
-        max-width: 100%;
-    }
+
     .menu-product-card:hover{
         transform: scale(1);
         box-shadow: none;
