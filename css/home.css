@@ -230,6 +230,7 @@
 }
 
 .goToMenuBtn{
+    margin: 25px 0;
     font-family: Poppins-ExtraBold, sans-serif;
     padding: 10px 15px;
     font-size: 125%;
@@ -494,11 +495,14 @@
         height: 450px;
         overflow-x: scroll;
         overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
     }
     .home-product-wrapper, .home-sandwich-wrapper{
         height: 450px;
         margin: 0 40px 0 40px;
         width: 95%;
+        scroll-snap-align: center;
     }
     .home-product:hover .home-product-img{
         transform: none;
