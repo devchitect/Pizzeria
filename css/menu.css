@@ -457,11 +457,9 @@
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
     }
-    .product-image-card{
-        scroll-snap-align: center ;
-    }
     .menu-product-card{
-        margin: 0 15px;
+        margin: 0 25px;
+        scroll-snap-align: center;
     }
 
 
