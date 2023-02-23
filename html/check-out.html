@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <form name="checkoutForm" id="checkoutForm" method="post">
+    <form action="#!order-complete" name="checkoutForm" id="checkoutForm" method="post">
         <div class="checkout-content">
 
             <div class="billing-details">
@@ -168,11 +168,17 @@
                             support your experience throughout this website,
                             and for other purposes described in our <a href="#!policy" class="links">privacy policy</a>.
                         </p>
+                        <br>
                         <input type="checkbox" id="acceptTerm" required>
                         <label for="acceptTerm">I have read and agree to the website
                             <a href="#!policy" class="links">Terms and Conditions</a>.</label>
                     </div>
-                    <div class="co-submit-box"><a href="#!order-complete"><button id="co-submit">Place Order</button></a></div>
+                    <div class="co-submit-box"><a href="#!order-complete" id="place-order"><button id="co-submit">Place Order</button></a></div>
+                    <div>
+                        <strong class="on-order-error oe1"></strong>
+                        <strong class="on-order-error oe2"></strong>
+                        <strong class="on-order-error oe3"></strong>
+                    </div>
                 </div>
             </div>
         </div>

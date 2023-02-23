@@ -467,7 +467,7 @@ app.controller("menuController", function ($scope, $rootScope){
             "sour cream, shroom, tomatoes, purple onion, bell pepper, olive, cream cheese, garlic salt, dill weed."),
         new food("Classic Garlic Bread","Garlic Bread",null, null, null,6.00, "Standard","images/menu/garlic_breads/classic.jpg",
             "french white bread, romano cheese , minced garlic n garlic powder, fresh parsley, butter."),
-        new food("Pull-Apart Garlic & Cheese","Garlic Bread",null, null, null,5.60,"Standard","images/menu/garlic_breads/pull-apart-cheese-n-garlic-bread.jpg",
+        new food("Cheese & Garlic Pull-Apart","Garlic Bread",null, null, null,5.60,"Standard","images/menu/garlic_breads/pull-apart-cheese-n-garlic-bread.jpg",
             "brioche, mozzarella cheese,dried parsley flakes, garlic salt."),
         new food("Garlic Dill Soda Bread","Garlic Bread",null, null, null,6.00, "Standard","images/menu/garlic_breads/Garlic-Dill-Soda-Bread.jpg",
             "baked bread, buttermilk, ground mustard, dill weed, shredded cheddar cheese, dried parsley"),
@@ -822,6 +822,7 @@ app.controller("checkoutController",function ($scope, $rootScope){
         }
 
     }
+
     document.getElementById('co-email').addEventListener('focus',() => { errorEmail.innerHTML = ""})
     document.getElementById('co-email').addEventListener('focusout',() => {
         if(Boolean($scope.email.match(emailRegex)) === false){
@@ -829,10 +830,26 @@ app.controller("checkoutController",function ($scope, $rootScope){
         }
     })
 
-    document.getElementById('checkoutForm').addEventListener("submit",(e) => {
+    document.getElementById('place-order').addEventListener("click",(e) => {
 
-        if($scope.paymentMethod === null){
+        if($scope.paymentMethod === null || $scope.name == null || $scope.phone == null || $scope.address == null || $scope.email == null || document.getElementById("acceptTerm").checked === false){
             e.preventDefault()
+            if( $scope.name == null || $scope.phone == null || $scope.address == null){
+                document.querySelector(".oe1").innerHTML = " ! Fill your Billing Details.";
+            }else{
+                document.querySelector(".oe1").innerHTML = "";
+            }
+             if($scope.paymentMethod === null ){
+                 document.querySelector(".oe2").innerHTML = " ! Chose Payment Method.";
+             }else{
+                 document.querySelector(".oe2").innerHTML = "";
+             }
+             if(document.getElementById("acceptTerm").checked === false){
+                 document.querySelector(".oe3").innerHTML = " ! Agree with our Term and Conditions.";
+             }else {
+                 document.querySelector(".oe3").innerHTML = "";
+             }
+
         }else {
             $scope.placeOrder()
             sessionStorage.setItem("paymentMethod", $scope.paymentMethod);

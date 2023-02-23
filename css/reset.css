@@ -80,6 +80,9 @@ button{
 body{
     animation: 600ms load reverse;
     overflow-x: hidden;
+    min-height: 100vH;
+    display: flex;
+    flex-direction: column;
 }
 
 .textColor-red{

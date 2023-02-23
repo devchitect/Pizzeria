@@ -12,7 +12,7 @@
 .checkout-content div{
     margin: 0 10px;
 }
-.billing-details .co-error{
+.billing-details .co-error, .on-order-error{
     margin-top: 6px;
     color: var(--sidered);
 }
@@ -123,8 +123,10 @@
     text-decoration: none;
     color: var(--sidered);
 }
+
 .acceptTerm{
     line-height: 150%;
+    margin-top: 25px;
 }
 
 .co-submit-box{
@@ -132,6 +134,7 @@
     text-align: center;
 }
 #co-submit{
+    font-size: 100%;
     font-weight: bold;
     color: white;
     background: var(--sidered);
@@ -140,6 +143,9 @@
     cursor: pointer;
 }
 
+.on-order-error{
+    display: block;
+}
 
 @media screen and (max-width: 1200px) {
     .checkout-wrapper {
