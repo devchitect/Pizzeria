@@ -417,7 +417,7 @@
         font-size: 1.5rem;
     }
     .sub-menu{
-        --columns:1;
+        --columns: 1;
     }
     .buy-button{
         width: 66%;
@@ -436,17 +436,12 @@
     }
 
 }
-@media screen and (max-width:400px ){
-    -webkit-scrollbar,
-    -webkit-scrollbar-track {
-        display: block !important;
-    }
-
-    .menu-buy-alert{
-        width: 85%;
+@media screen and (max-width: 500px ){
+    .menu-content{
+        margin: 25px 12.5%;
     }
     .sub-menu{
-        height: 680px;
+        height: 800px;
         overflow-x: scroll;
         overflow-y: hidden;
         flex-direction: column;
@@ -458,8 +453,20 @@
     }
     .menu-product-card{
         width: 100%;
-        margin: 0 25px;
+        margin: 0 35px;
         scroll-snap-align: center;
+    }
+}
+
+@media screen and (max-width: 400px ){
+    .menu-buy-alert{
+        width: 85%;
+    }
+    .sub-menu{
+        height: 680px;
+    }
+    .menu-product-card{
+        margin: 0 25px;
     }
 
 

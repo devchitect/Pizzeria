@@ -83,7 +83,7 @@
                     <div class="password-su">
                         <div class="su-field">
                             <label for="password-su">Password</label>
-                            <input type="password" name="pass1"  id="password-su" required ng-model="pass1" class="su-input">
+                            <input type="password" name="pass1"  id="password-su" required ng-model="pass1" ng-change="validPassCondition()" class="su-input">
                             <i class="bi bi-eye-slash-fill sushow1" ng-click="showPassSu1()"></i>
                         </div>
                         <small class="error error-pass1"></small>
@@ -101,12 +101,13 @@
                     </div>
 
                     <div class="pass-remind">
-                        <h4>For security, <span>password</span> must at least 8 character and meet 4 condition following:</h4>
+                        <h4>For security, <span>password</span> must and meet 5 condition following:</h4>
                         <ul>
-                            <li>Numbers (0-9). </li>
-                            <li>Lowercase/small letters (a-z). </li>
-                            <li>Uppercase/capital letters (A-Z). </li>
-                            <li>Special characters (like !@#$)</li>
+                            <li><span class="charLengthCondition condition"></span><span>At least 8 characters.</span></li>
+                            <li><span class="numbCondition condition"></span><span>Numbers (0-9).</span></li>
+                            <li><span class="lowerCaseCondition condition"></span><span>Lowercase/small letters (a-z).</span></li>
+                            <li><span class="upperCaseCondition condition"></span><span>Uppercase/capital letters (A-Z).</span> </li>
+                            <li><span class="specialCharCondition condition"></span><span>Special characters (like !@#$).</span></li>
                         </ul>
                     </div>
                 </div>
@@ -116,7 +117,7 @@
             <div class="accept-term">
                 <input type="checkbox" name="" id="su-accept" required >
                 <label for="su-accept">I agree to join Casanova Pizzeria's Membership and accept
-                <a href="#!policy">the terms, conditions and privacy policy of Shale Pizza Co.</a></label>
+                <a href="#!policy">the terms, conditions and privacy policy of Casanova Pizzeria.</a></label>
             </div>
 
             <button id="su-submit" class="su-submit" type="submit" ng-click="createFakeData()">Sign Up</button>

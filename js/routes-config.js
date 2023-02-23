@@ -883,7 +883,7 @@ app.controller("finishOrderController",function ($rootScope, $scope, $sessionSto
 })
 
 /*Sign Up Controller*/
-app.controller("signUpController", ($scope) => {
+app.controller("signUpController", function($scope){
     let passSu1Flag, passSu2Flag;
     passSu1Flag = passSu2Flag = true;
     $scope.showPassSu1 = () => {
@@ -933,6 +933,51 @@ app.controller("signUpController", ($scope) => {
     let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)[a-zA-Z0-9\W]{8,}$/;
     let phoneRegex = /\d{10}/;
     let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
+    $scope.validPassCondition = function (){
+        //at least 1 number
+        if(Boolean($scope.pass1.match(/^(?=.*\d)/)) === true){
+            document.querySelector(".numbCondition").innerHTML = "<span class=\"bi bi-check-circle-fill\"></span>";
+            document.querySelector(".numbCondition").style.color = "#28af62";
+        }else{
+            document.querySelector(".numbCondition").innerHTML = "<span class=\"bi bi-exclamation-triangle-fill\"></span>";
+            document.querySelector(".numbCondition").style.color = "#D53232FF";
+        }
+        // 1 lowercase letter
+        if(Boolean($scope.pass1.match(/^(?=.*[a-z])/)) === true){
+            document.querySelector(".lowerCaseCondition").innerHTML = "<span class=\"bi bi-check-circle-fill\"></span>";
+            document.querySelector(".lowerCaseCondition").style.color = "#28af62";
+        }else{
+            document.querySelector(".lowerCaseCondition").innerHTML = "<span class=\"bi bi-exclamation-triangle-fill\"></span>";
+            document.querySelector(".lowerCaseCondition").style.color = "#D53232FF";
+        }
+        // 1 uppercase letter
+        if(Boolean($scope.pass1.match(/^(?=.*[A-Z])/)) === true){
+            document.querySelector(".upperCaseCondition").innerHTML = "<span class=\"bi bi-check-circle-fill\"></span>";
+            document.querySelector(".upperCaseCondition").style.color = "#28af62";
+        }else{
+            document.querySelector(".upperCaseCondition").innerHTML = "<span class=\"bi bi-exclamation-triangle-fill\"></span>";
+            document.querySelector(".upperCaseCondition").style.color = "#D53232FF";
+        }
+        // 1 special character
+        if(Boolean($scope.pass1.match(/(?=.*\W)/)) === true){
+            document.querySelector(".specialCharCondition").innerHTML = "<span class=\"bi bi-check-circle-fill\"></span>";
+            document.querySelector(".specialCharCondition").style.color = "#28af62";
+        }else{
+            document.querySelector(".specialCharCondition").innerHTML = "<span class=\"bi bi-exclamation-triangle-fill\"></span>";
+            document.querySelector(".specialCharCondition").style.color = "#D53232FF";
+        }
+        // length
+        if(Boolean($scope.pass1.match(/[a-zA-Z0-9\W]{8,}/)) === true){
+            document.querySelector(".charLengthCondition").innerHTML = "<span class=\"bi bi-check-circle-fill\"></span>";
+            document.querySelector(".charLengthCondition").style.color = "#28af62";
+        }else{
+            document.querySelector(".charLengthCondition").innerHTML = "<span class=\"bi bi-exclamation-triangle-fill\"></span>";
+            document.querySelector(".charLengthCondition").style.color = "#D53232FF";
+        }
+
+    }
 
     function validPass1(){
         if(Boolean($scope.pass1.match(passRegex)) === false){
@@ -1126,11 +1171,7 @@ app.controller("policyController", function($scope) {
                 }
                 break;
             case "trademark":
-                if ($scope.trademark === true) {
-                    $scope.trademark = false;
-                } else {
-                    $scope.trademark = true;
-                }
+                $scope.trademark = $scope.trademark !== true;
                 break;
             case "access":
                 if ($scope.access === true) {

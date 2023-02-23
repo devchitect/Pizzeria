@@ -98,7 +98,6 @@
 }
 .pass-remind li{
     font-size: 0.9rem;
-    line-height: 140%;
 }
 
 .accept-term{
@@ -139,7 +138,10 @@
 .error{
     color: var(--sidered);
 }
-
+.condition{
+    font-size: 125%;
+    padding: 10px;
+}
 @media screen and (max-width: 1200px){
     #su-form-box{
         margin: 0 6%;

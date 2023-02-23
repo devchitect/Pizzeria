@@ -142,7 +142,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
+#co-submit:hover{
+    background: linear-gradient(90deg, #f12711, #f5af19);
+    animation: bg-color 1234ms infinite;
+}
 .on-order-error{
     display: block;
 }
