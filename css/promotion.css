@@ -1,5 +1,7 @@
 .promo-wrapper{
-    margin: 50px 0 100px;
+    padding: 50px 0 100px;
+    background: url("../images/background/leaf-floating.jpg");
+    background-size: contain;
 }
 .promo{
     display: flex;

@@ -479,12 +479,12 @@ app.controller("menuController", function ($scope, $rootScope){
             "steamed Wiener, mustard, purple onion, cheese sause."),
         new food("Vietnamese Banh Mi","Sandwich",null, null, null,6.85,"Standard","images/menu/sandwiches/vietnamese-sandwich.jpg",
             "eggs, grilled meat, carrot, cucumber, vietnamese special sauce, onion."),
+        new food("Lobster Roll","Sandwich",null, null, null,8.00,"Standard","images/menu/sandwiches/lobster-roll.jpg",
+            "lobster meat, mayonnaise, garlic, onion, kosher salt, lemon, unsalted butter, pepper, scallions."),
         new food("Jambon Beurre","Sandwich",null, null, null,4.00,"Standard","images/menu/sandwiches/jambon-beurre.jpg",
             "sliced pork ham, butter, pickles, baguette."),
         new food("Steak Burger","Sandwich",null, null, null,6.50,"Standard","images/menu/sandwiches/steak-burger.jpg",
             "hamburger bun, prime rib, smoked bacon, blue cheese, green lettuce, red onion, pepper, butter, fresh tomato."),
-        new food("Lobster Roll","Sandwich",null, null, null,8.00,"Standard","images/menu/sandwiches/lobster-roll.jpg",
-            "lobster meat, mayonnaise, garlic, onion, kosher salt, lemon, unsalted butter, pepper, scallions."),
         new food("Apple Crisp","Dessert",null, null, null,9.00,"Standard","images/menu/desserts/apple-crisp.jpg",
             "apple cinnamon cake filling topped with crunchy oat crumble, vanilla ice cream and caramel sauce."),
         new food("Cheese Cake","Dessert",null, null, null,8.00,"Standard","images/menu/desserts/cheesecake.jpg",
@@ -502,10 +502,23 @@ app.controller("menuController", function ($scope, $rootScope){
         new food("Happy Hour","Combo",null, null, null,28.00,"Combo","images/menu/combo/combo-pizzas-drinks.jpg", "2 Pizza Size M + 2 Drinks")
     ]
 
+    $scope.resetSearch = function () {
+        $scope.button = document.getElementsByClassName("menu-button");
+        for (let i = 0; i< $scope.button.length; i++) {
+            if ($scope.button[i].classList.contains("nav-active-color")) {
+                $scope.button[i].classList.remove("nav-active-color");
+            }
+        }
+        $scope.keyword = "";
+        $scope.category = "";
+        $scope.flag = false;
+    }
+    $scope.resetSearch()
 
     $scope.search = function (string) {
-        $rootScope.gotoAnchor('anchor')
-        $scope.test = string;
+        $scope.resetSearch()
+        $rootScope.gotoAnchor('anchor');
+        $scope.category = string;
         $scope.button = document.getElementsByClassName("menu-button");
         $scope.flag = false;
         for (let i = 0; i < $scope.button.length; i++) {
@@ -513,37 +526,37 @@ app.controller("menuController", function ($scope, $rootScope){
                 switch (string) {
                     case "Pizza":
                         if (i === 0) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
                     case "Garlic Bread":
                         if (i === 1) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
                     case "Sandwich":
                         if (i === 2) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
                     case "Dessert":
                         if (i === 3) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
                     case "Beverage":
                         if (i === 4) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
                     case "Combo":
                         if (i === 5) {
-                            $scope.test = "";
+                            $scope.category = "";
                             $scope.flag = true;
                         }
                         break;
@@ -576,22 +589,10 @@ app.controller("menuController", function ($scope, $rootScope){
         }
     }
 
-    $scope.resetSearch = function () {
-        $scope.button = document.getElementsByClassName("menu-button");
-        for (let i = 0; i< $scope.button.length; i++) {
-            if ($scope.button[i].classList.contains("nav-active-color")) {
-                $scope.button[i].classList.remove("nav-active-color");
-            }
-        }
-        $scope.test = "";
-        $scope.flag = false;
-    }
-    $scope.resetSearch()
-
-
     $scope.Enter = function(keyEvent,string) {
+        $scope.resetSearch()
         if (keyEvent.which === 13) {
-            $scope.test = string;
+            $scope.keyword = string;
             $rootScope.gotoAnchor('anchor');
         }
         $scope.button = document.getElementsByClassName("menu-button");

@@ -234,15 +234,23 @@
 }
 .goToMenuBtn{
     font-family: Poppins-ExtraBold, sans-serif;
-    padding: 15px 20px;
-    font-size: 135%;
+    padding: 10px 15px;
+    font-size: 125%;
     border-radius: 8px;
     color: white;
     background: linear-gradient(90deg, #f12711, #f5af19);
+    animation: bg-color 1234ms infinite;
+
 }
+@keyframes bg-color {
+        25%{ background: linear-gradient(180deg, #f12711, #f5af19)}
+        50%{ background: linear-gradient(270deg, #f12711, #f5af19)}
+        75%{ background: linear-gradient(360deg, #f12711, #f5af19)}
+}
+
 .goToMenuBtn:hover{
-    background: linear-gradient(270deg, #f12711, #f5af19);
-    text-shadow: 1px 1px 1px var(--darkred);
+    outline: 2px solid var(--sidered);
+    animation: none;
 }
 
 

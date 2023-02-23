@@ -35,7 +35,7 @@
     align-items: center;
   }
   .prev:hover, .next:hover{
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5),  rgba(255, 255, 255, 0.5));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(86, 86, 86, 0.5),  rgba(255, 255, 255, 0.5));
       color: var(--strongorange);
       text-shadow: 0 0 5px var(--sidered);
       cursor: pointer;

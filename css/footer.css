@@ -178,7 +178,7 @@ footer ul{
 }
 @media screen and (max-width: 640px){
     .footer-background{
-        background-attachment: fixed ;
+        background-attachment: fixed;
         background-size: cover;
     }
     .footer-background-layer{

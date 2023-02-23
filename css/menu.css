@@ -53,13 +53,11 @@
 
 }
 
-.menu-title h3{
+.menu-title h1{
     display: inline-block;
     font-family: Poppins-ExtraBold, sans-serif;
     color: var(--darkred);
-    text-shadow:2px 2px 2px rgba(142, 21, 4, 0.65);
-    pointer-events: initial;
-    font-size: 230%;    font-weight: bold;
+    text-shadow:1px 1px 1px rgba(142, 21, 4, 0.65);
     padding: 50px 0 35px;
 }
 
@@ -77,7 +75,7 @@
     color: white;
     text-shadow:3px 2px 1px rgba(142, 21, 4, 0.5);
     font-family: Pattaya, sans-serif;
-    font-size: 30px; font-weight: bold;
+    font-size: 1.7rem; font-weight: bold;
     letter-spacing: 1px;
     padding: 10px;
 }
@@ -107,7 +105,7 @@
     right: 10px;
     background: transparent;
     border: none;
-    font-size: 170%;
+    font-size: 150%;
     cursor: pointer;
     color: white;
 
@@ -115,17 +113,15 @@
 .visible-search-box div .icon-search:hover{
     color: darkred;
     text-shadow:2px 1px 3px rgba(142, 21, 4, 0.8);
-    background: rgba(142, 21, 4, 0.2);
-    border-radius: 10px;
-
 }
+
 .visible-search{
     width: 100%;
-    font-size: 20px; font-weight: bold;
+    font-size: 100%; font-weight: bold;
     padding: 15px 30px;
     background: rgba(67, 67, 67, 0.2);
     border-radius: 10px;
-    border: none;
+    border: transparent;
 }
 .visible-search:focus{
     outline: 2px solid var(--darkred);
@@ -161,11 +157,12 @@
 }
 
 .menu-product-card:hover {
-    box-shadow: 0 0 10px 10px lightgray;
+    box-shadow: 0 0 15px 6px lightgray;
     transform: scale(1.03);
 }
 .menu-product-card:hover .product-title{
     color: var(--sidered);
+    text-shadow: 0 0 5px rgba(213, 50, 50, 0.35);
 }
 
 .product-image-card {
@@ -174,19 +171,20 @@
     flex: 1;
     cursor: pointer;
     border-bottom: 2px solid rgba(211, 211, 211, 0.8);
-    margin: 0 10px 10px 10px;
-    padding:0 0 10px;
-}
+    margin: 5px;
+    overflow: hidden;
 
+}
 .product-title{
     text-align: center;
-    margin: 0 auto;
-    padding: 8px 10px 8px;
+    margin: 5px 5px;
+    flex: 1;
 }
 
 .product-img{
     padding: 5px;
     position: relative;
+    flex-shrink: 0;
 }
 .product-img img {
     border-radius: 5px;
@@ -232,6 +230,7 @@
 }
 .card-content {
     margin-top: auto;
+    padding-top: 8px;
     flex-shrink: 0;
     text-align: center;
 }
@@ -399,6 +398,9 @@
 }
 
 @media screen and (max-width:640px ){
+    .menu-product-card:hover{
+        transform: none;
+    }
     .menu-buy-alert{
         top: 100px;
         width: 50%;
@@ -409,11 +411,9 @@
     .menu-navbar{
         padding: 25px 0;
     }
-    .menu-title h3{
-        font-size: 32px;
-    }
+
     .menu-button{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .sub-menu{
         --columns:1;
@@ -446,10 +446,7 @@
         flex-direction: column;
     }
 
-    .menu-product-card:hover{
-        transform: scale(1);
-        box-shadow: none;
-    }
+
 }
 
 @media (hover: hover) {
