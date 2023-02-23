@@ -2,7 +2,17 @@
 
 - View demo website at : https://devchitect.github.io/Pizzeria-Webstore-Template/
 
-## Feature :gear: :
+## Pages:
+- Home
+- Menu
+- Promotions
+- About
+- Policy
+- Contact
+- Stores
+- Sign In / Sign Up
+
+## Feature :gear: 
 - :clipboard: Menu ---> View Product ------------> Chose Product --- Chose Amount ---> "Buy" ---> View Cart
 
 - :basket: Cart ---> Interact with the products (Edit Quantity / Remove from Cart) -----> Checkout
