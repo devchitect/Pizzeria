@@ -11,6 +11,7 @@
 - Contact
 - Stores
 - Sign In / Sign Up
+- Customer Reviews
 
 ## Feature :gear: 
 - :clipboard: Menu ---> View Product ------------> Chose Product --- Chose Amount ---> "Buy" ---> View Cart
