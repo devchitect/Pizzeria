@@ -1,5 +1,8 @@
 .review-wrapper{
     padding: 50px 10%;
     text-align: center;
+}
+.review-title{
     font-family: Poppins-ExtraBold, sans-serif;
+    color: #3c3c3c;
 }

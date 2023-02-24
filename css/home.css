@@ -497,11 +497,12 @@
         overflow-x: scroll;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        -webkit-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     }
     .home-product-wrapper, .home-sandwich-wrapper{
         height: 450px;
-        margin: 0 40px 0 40px;
+        margin: 0 30px;
         width: 95%;
         scroll-snap-align: center;
     }

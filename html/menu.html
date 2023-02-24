@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menu</title>
+
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 
             <div class="catalog-download">
                 <div class="catalog-toggle bi bi-cloud-download" ng-click="downloadCatalog()"></div>
-                <a href="images/catalog/menu-Catalog.png" download>Download Menu</a>
+                <a href="/images/catalog/menu-Catalog.png" download>Download Menu</a>
             </div>
 
             <div class="menu-navbar-box">
@@ -91,6 +92,7 @@
                                         <span class="size-option" ng-class="{'turn-color': size === f.oneSize}" ng-click="chooseSize(f.oneSize)">{{f.oneSize}}</span>
                                     </div>
                                 </div>
+
                                 <div class="menu-amount">
                                     <h5>Amount</h5>
                                     <div>
@@ -99,14 +101,17 @@
                                         <button ng-click="incAmount()" >+</button>
                                     </div>
                                 </div>
+
                                 <div class="menu-price">
                                     <span ng-if="typeof(size) === number" ng-class="{'turn-color': size}">{{sizeMoney * amount | currency}}</span>
                                     <span ng-if="!size">{{f.PriceS | currency}} - {{f.PriceL | currency}}</span>
                                     <span ng-if="size && f.onePrice" ng-class="{'turn-color': size === f.oneSize}">{{f.onePrice * amount | currency}}</span>
                                 </div>
+
                                 <div class="buy-button-box">
                                     <button id="buy-button" class="buy-button" ng-click="buyItem()" ng-class="{'buy-unactive' : !size}">Buy</button>
                                 </div>
+
                             </div>
                         </li>
                     </ul>

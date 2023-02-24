@@ -449,11 +449,12 @@
         scroll-behavior: auto;
         scrollbar-width: auto;
         -webkit-overflow-scrolling: touch;
+        -webkit-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     }
     .menu-product-card{
-        width: 100%;
-        margin: 0 35px;
+        width: 95%;
+        margin: 0 25px;
         scroll-snap-align: center;
     }
 }
@@ -465,11 +466,6 @@
     .sub-menu{
         height: 680px;
     }
-    .menu-product-card{
-        margin: 0 25px;
-    }
-
-
 }
 
 @media (hover: hover) {
