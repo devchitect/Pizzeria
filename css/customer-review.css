@@ -5,4 +5,95 @@
 .review-title{
     font-family: Poppins-ExtraBold, sans-serif;
     color: #3c3c3c;
+    padding-bottom: 50px;
+}
+
+.all-reviews-wrapper{
+    position: relative;
+}
+.all-reviews{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 33%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.all-reviews::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.all-reviews {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.normal-review{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 25px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-align: center;
+}
+.normal-review:hover{
+    transform: scale(1.025);
+    background: url("../images/testimonial-background/testimonial-bg-light.jpg");
+    background-size: contain ;
+}
+
+.normal-review .upper-review-ct{
+    font-size: 90%;
+}
+.normal-review .lower-review-ct{
+    margin-top: auto;
+    padding-top: 15px;
+}
+.normal-review .lower-review-ct img{
+    height: 80px;
+    border-radius: 15px;
+}
+.normal-review .lower-review-ct h3{
+    font-size: 95%;
+    font-family: Poppins-SemiBold, sans-serif;
+}
+
+
+.r-prev, .r-next{
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 111;
+}
+.r-prev{
+    left: -25px;
+    top: 0;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.r-next{
+    right: -25px;
+    top: 0;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+.r-prev:hover, .r-next:hover{
+    color: var(--sidered);
+}
+
+@media screen and (max-width: 1200px) {
+    .all-reviews{
+        grid-auto-columns: 100%;
+    }
+
+    .r-prev, .r-next{
+        font-size: 25px;
+    }
 }

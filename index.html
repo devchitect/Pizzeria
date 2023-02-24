@@ -47,7 +47,7 @@
         <!--   Header contains logo, slogan, hotline, email, social links, and user account features-->
         <div class="header-content">
             <div class="logo-slogan">
-                <div class="logo"><a href="#/!"><img class="logo-img" src="images/logo.png" alt="" ng-click="goTop()"></a></div>
+                <div class="logo"><a href="#/!"><img class="logo-img" src="./images/logo.png" alt="" ng-click="goTop()"></a></div>
                 <div class="slogan">" Love at first bite."</div>
             </div>
 
@@ -61,7 +61,7 @@
                 <div id="nav-icon" class="bi bi-list"></div>
 
                 <div class="cart">
-                    <a href="#!cart" class="cart-content" ng-click="goTop()">
+                    <a href="#!cart" class="cart-content" ng-click="goTop()" onclick="closeNav()">
                         <div class="cart-icon-box">
                             <span class="cart-icon"><i class="bi bi-basket"></i></span>
                             <span class="product-quantity">{{quantity}}</span>
@@ -94,27 +94,27 @@
 
         <div class="nav-content">
             <ul>
-                <li><a href="#/!" class="nav-link" id="home-page" ng-click="goTop()">Home</a></li>
+                <li><a href="#/!" class="nav-link" id="home-page" ng-click="goTop()" onclick="closeNav()">Home</a></li>
                 <li class="menu-nav">
-                    <a href="#!menu" class="nav-link" id="menu-page" ng-click="goTop()">Menu</a>
+                    <a href="#!menu" class="nav-link" id="menu-page" ng-click="goTop()" onclick="closeNav()">Menu</a>
                 </li>
                 <li class="promo-nav">
                     <a href="#!promotion" class="nav-link" id="promotion-page" ng-click="goTop()">Promotions</a>
                     <ol class="promo-dropdown">
-                        <li><a href="#!promotion" class="promo-link">Discounts</a></li>
-                        <li><a href="" class="promo-link">Membership Special</a></li>
+                        <li><a href="#!promotion" class="promo-link" ng-click="goTop()" onclick="closeNav()">Discounts</a></li>
+                        <li><a href="" class="promo-link" ng-click="goTop()" onclick="closeNav()">Membership Special</a></li>
                     </ol>
                 </li>
                 <li class="about-nav">
                     <a href="#!about" class="nav-link" id="about-page" ng-click="goTop()">About</a>
                     <ol class="about-dropdown">
-                        <li><a href="#!about" class="about-link">About Us</a></li>
-                        <li><a href="#!customer-review" class="about-link">Customer Reviews</a></li>
+                        <li><a href="#!about" class="about-link" ng-click="goTop()" onclick="closeNav()">About Us</a></li>
+                        <li><a href="#!customer-review" class="about-link" ng-click="goTop()" onclick="closeNav()">Customer Reviews</a></li>
                     </ol>
                 </li>
-                <li><a href="#!policy" class="nav-link" id="policy-page" ng-click="goTop()">Policy</a></li>
-                <li><a href="#!contact" class="nav-link" id="contact-page" ng-click="goTop()">Contact</a></li>
-                <li><a href="#!stores" class="nav-link" id="stores-page" ng-click="goTop()"><i class="bi bi-geo-alt"></i> Stores</a></li>
+                <li><a href="#!policy" class="nav-link" id="policy-page" ng-click="goTop()" onclick="closeNav()">Policy</a></li>
+                <li><a href="#!contact" class="nav-link" id="contact-page" ng-click="goTop()" onclick="closeNav()">Contact</a></li>
+                <li><a href="#!stores" class="nav-link" id="stores-page" ng-click="goTop()" onclick="closeNav()"><i class="bi bi-geo-alt"></i> Stores</a></li>
             </ul>
         </div>
 
@@ -184,7 +184,7 @@
                 </form>
                 <div class="to-signUp">
                     <div class="blah">You don't have an account yet ?!</div>
-                    <div><a href="#!sign-up" onclick="closeAcc()" id="sign-up-here" ng-click="goTop()">Sign Up Here!</a></div>
+                    <div><a href="#!sign-up" onclick="closeAcc(); closeNav();" id="sign-up-here" ng-click="goTop()">Sign Up Here!</a></div>
                 </div>
             </div>
         </div>

@@ -360,13 +360,6 @@
         /*Tablet*/
         @media screen and (max-width: 1200px){
             /*Header*/
-            /*#header{*/
-            /*    top: 0 !important;*/
-            /*    position: -webkit-sticky;*/
-            /*    position: sticky;*/
-            /*    z-index: 9999 !important;*/
-            /*}*/
-
             .logo-slogan{
                 order: 3;
             }
@@ -421,16 +414,17 @@
                 position: fixed;
                 left: 0;
                 top: 100px;
+                bottom: 0;
                 height: 100%;
                 width: 39%;
                 flex-direction: column;
                 transition: 600ms;
                 font-weight: bold;
+                overflow: auto;
 
             }
             .nav-content{
                 order: 2;
-                margin: 10px 0 10px;
                 width: 100%;
             }
             .nav-content > ul{
@@ -440,6 +434,7 @@
             .nav-content ul li{
                 width: 100%;
                 border-bottom: 1px solid rgba(136, 45, 45, 0.5);
+                overflow: hidden;
             }
             .nav-content ul li:nth-child(7){
                 border-bottom: 1px solid transparent;
@@ -458,23 +453,47 @@
                 display: none;
             }
             .hotline{
-                display: flex;
-                flex-direction: column;
+                margin-top: 10px;
+                display: block;
                 text-align: center;
-                font-size: 18px;
+                font-size: 100%;
             }
             .hotline div{
-                margin-top: 13px;
+                margin-top: 5px;
             }
             .hotline .title{
+                font-size: 95%;
                 display: block;
-
             }
+            .hotline a{
+                color: var(--yellow);
+            }
+
             .hotline-header{
                 display: none;
             }
-        }
 
+            .promo-dropdown,.about-dropdown{
+                text-align: center;
+                visibility: visible;
+                position: initial;
+                background: var(--lightorange);
+                font-size: 85%;
+                color: var(--darkred);
+                transition: none;
+                display: none;
+            }
+            .promo-dropdown > li ,.about-dropdown > li{
+                padding: 10px;
+                border-bottom: 1px solid var(--sidered) !important;
+            }
+            .promo-dropdown > li:hover ,.about-dropdown > li:hover{
+
+            }
+            .promo-dropdown > li:last-child ,.about-dropdown > li:last-child{
+                border-bottom: none !important;
+            }
+        }
 
         /*Phone*/
         @media screen and (max-width: 640px){

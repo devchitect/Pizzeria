@@ -94,11 +94,12 @@
                 <div class="coupon">
                     <label for="coupon"></label>
                     <input type="text" name="" id="coupon" ng-model="discountCode" placeholder="Coupon Code" ng-change="discountFlag = null">
-                    <button class="apply-coupon" ng-click="applyCoupon(discountCode)">Apply Counpon</button>
+                    <button class="apply-coupon" ng-click="applyCoupon(discountCode)">Apply Coupon</button>
                 </div>
                 <div class="discount-apply-alert">
-                    <h5 class="apply-true" ng-if="discountFlag === true">Discount Code has been applied!</h5>
+                    <h5 class="apply-true" ng-if="discountFlag === true && discountCondition === true">Discount Code has been applied!</h5>
                     <h5 class="apply-false" ng-if="discountFlag === false && discountCode.length > 1">Discount Code does not exist!</h5>
+                    <h5 id="code-failed" class="apply-false"></h5>
                 </div>
             </div>
 

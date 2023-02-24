@@ -11,14 +11,24 @@
 <body>
     <div class="review-wrapper">
         <h1 class="review-title">Customer Reviews</h1>
-        <div class="review-content">
-            <div class="highlight-review">
 
+        <div class="review-content" ng-controller="reviewData">
+
+            <div class="all-reviews-wrapper">
+                <div class="r-prev" ng-click="swipeLeft()"><i class="bi bi-caret-left-square"></i></div>
+                <div class="r-next" ng-click="swipeRight()"><i class="bi bi-caret-right-square"></i></div>
+
+                <div class="all-reviews">
+                    <div ng-repeat="r in reviews | limitTo: reviews.length : 0" class="normal-review">
+                        <div class="upper-review-ct"><p>" {{r.description}} "</p></div>
+                        <div class="lower-review-ct">
+                            <img src="{{r.img}}" alt="">
+                            <h3>{{r.fullname}}</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="all-reviews">
-
-            </div>
         </div>
     </div>
 </body>

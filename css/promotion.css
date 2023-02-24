@@ -28,7 +28,7 @@
 
 .promo-box:hover{
     opacity: 1;
-    transform: scale(1.025);
+    transform: scale(1.015);
     box-shadow: 0 0 25px 5px #bfbfbf;
 }
 .promo-box:hover .codePromotion span{
