@@ -89,6 +89,12 @@
                         </div>
                     </div>
                     <div>
+                        <label for="contact-email"></label><input type="email" name="contactEmail" id="contact-email" ng-model="contactEmail" placeholder="Your Email" required>
+                        <div class="contact-error">
+                            <small ng-show="contactForm.contactEmail.$touched && contactForm.contactEmail.$invalid">This field is required.</small>
+                        </div>
+                    </div>
+                    <div>
                         <label for="contact-message"></label><textarea name="contactMess" id="contact-message" rows="5" ng-model="contactMess" placeholder="Message" required></textarea>
                         <div class="contact-error">
                             <small ng-show="contactForm.contactMess.$touched && contactForm.contactMess.$invalid">This field is required.</small>

@@ -44,7 +44,7 @@
     padding: 10px;
     border-radius: 3px;
     background: white;
-    border: 1px solid grey;
+    border: 1px solid #b2b2b2;
     resize: none;
 }
 .billing-form div > input:focus, .billing-form div > textarea:focus{

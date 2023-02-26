@@ -127,12 +127,13 @@
     text-align: center;
     font-size: 265%;
     font-family: BerkshireSwash, sans-serif;
-    color: var(--sidered);
     font-weight: bold;
     padding: 10px;
     border-radius: 15px;
-    text-shadow: 0 0 3px rgba(213, 50, 50, 0.8),
-                0 0 8px rgba(213, 50, 50, 0.2);
+    background: linear-gradient(90deg, #f12711, #f5af19);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .home-pizza-content .intro-title, .home-sandwich-title{
     font-size: 160%;

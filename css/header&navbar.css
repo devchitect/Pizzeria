@@ -3,7 +3,6 @@
     .header-nav{
         position: sticky;
         position: -webkit-sticky;
-
         top: 0;
         z-index: 99999;
     }
@@ -13,6 +12,7 @@
             position: relative;
             font-family: Poppins, sans-serif;
             color: white;
+            z-index: 999;
         }
         #header a{
             text-decoration: none;
@@ -103,7 +103,7 @@
             color: white;
             display: flex;
             font-family: Poppins,sans-serif; font-size: 18px;
-            z-index: 9999;
+            z-index: 99;
             opacity: 96%;
         }
         .nav a{
@@ -236,9 +236,6 @@
             /*Navigator*/
             .nav{
                 padding: 10px 10% 10px;
-                /*position: sticky;*/
-                /*position: -webkit-sticky;*/
-                /*top: 0;*/
                 justify-content: space-between;
                 animation: toggle 800ms reverse;
             }
@@ -412,15 +409,15 @@
             }
             .nav{
                 position: fixed;
-                left: 0;
-                top: 100px;
+                top: 0;
                 bottom: 0;
-                height: 100%;
+                height: 100vH;
                 width: 39%;
                 flex-direction: column;
                 transition: 600ms;
                 font-weight: bold;
-                overflow: auto;
+                overflow-y: auto;
+               padding-top: 100px;
 
             }
             .nav-content{
@@ -453,7 +450,7 @@
                 display: none;
             }
             .hotline{
-                margin-top: 10px;
+                margin: 10px 0 20px;
                 display: block;
                 text-align: center;
                 font-size: 100%;
@@ -522,9 +519,8 @@
             }
             /*Nav*/
             .nav{
-                top: 80px;
                 width: 100%;
-                padding: 5px 0 5px;
+                padding: 80px 0 5px;
             }
             .nav-link{
                 font-size: 16px;

@@ -68,7 +68,7 @@
     width: 100%;
     font-size: 17px;
     border-radius: 5px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #b2b2b2;
 }
 .su-left input:focus,.su-left select:focus,.su-left input[type = "date"]:focus, .su-right input:focus{
     border: 1px solid transparent;
