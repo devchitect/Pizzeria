@@ -14,9 +14,68 @@
 
         <div class="review-content" ng-controller="reviewData">
 
+            <div class="review-form-wrapper">
+
+                <figure class="review-images-wrapper">
+                    <div class="review-slider">
+                        <div>
+                            <img src="./images/clients/happy-people-eating-pizza.png" alt="">
+                        </div>
+
+                        <div>
+                            <img src="./images/clients/laughing-young-friends-having-fun-picnic.png" alt="">
+                        </div>
+
+                        <div>
+                            <img src="./images/clients/three-friends-together-eating-pizza.png" alt="">
+                        </div>
+
+                        <div>
+                            <img src="./images/clients/happy-people-eating-pizza.png" alt="">
+                        </div>
+                    </div>
+                </figure>
+
+                <form action="" name="reviewForm" class="review-form" method="post">
+                    <h2>Share Your Moments</h2>
+                    <div class="review-input-line1">
+                        <div>
+                            <label for="review-name"></label>
+                            <input type="text" name="reviewName" id="review-name" placeholder="Your Name" ng-model="reviewName" required>
+                            <small  class="review-error" ng-show="reviewForm.reviewName.$touched && reviewForm.reviewName.$invalid">This field is required.</small>
+                        </div>
+                        <div>
+                            <label for="review-phone"></label>
+                            <input type="text" name="reviewPhone" id="review-phone" placeholder="Your Phone" ng-model="reviewPhone" required>
+                            <small  class="review-error" ng-show="reviewForm.reviewPhone.$touched && reviewForm.reviewPhone.$invalid">This field is required.</small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="review-email"></label>
+                        <input type="email" name="reviewEmail" id="review-email" placeholder="Your Email" ng-model="reviewEmail" required>
+                        <small  class="review-error" ng-show="reviewForm.reviewEmail.$touched && reviewForm.reviewEmail.$invalid">This field is required.</small>
+                    </div>
+                    <div>
+                        <label for="review-message"></label>
+                        <textarea name="reviewMessage" id="review-message" cols="30" rows="6" placeholder="Write your Review" ng-model="reviewMessage" required></textarea>
+                        <small  class="review-error" ng-show="reviewForm.reviewMessage.$touched && reviewForm.reviewMessage.$invalid">This field is required.</small>
+                    </div>
+                    <div>
+                        <button class="reviewBtn">Send Review</button>
+                    </div>
+
+                </form>
+            </div>
+
+
             <div class="all-reviews-wrapper">
                 <div class="r-prev" ng-click="swipeLeft()"><i class="bi bi-caret-left-square"></i></div>
                 <div class="r-next" ng-click="swipeRight()"><i class="bi bi-caret-right-square"></i></div>
+
+                <div class="all-reviews-title">
+                    <h3>Testimonial</h3>
+                    <h2>What clients think about us ?!</h2>
+                </div>
 
                 <div class="all-reviews">
                     <div ng-repeat="r in reviews | limitTo: reviews.length : 0" class="normal-review">
