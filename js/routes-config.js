@@ -898,6 +898,7 @@ app.controller("checkoutController",function ($scope, $rootScope){
 
 // Order-Complete Controller
 app.controller("finishOrderController",function ($rootScope, $scope, $sessionStorage){
+    $rootScope.goTop()
     $rootScope.updateCart()
 
     $scope.totalCartP = $rootScope.totalCartPrice;
