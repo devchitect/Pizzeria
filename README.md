@@ -1,7 +1,6 @@
 # Online Sale Store for a Pizza Restaurant.
 
-- View demo website at : https://devchitect.github.io/pizzeria-webstore-template/
-
+- View demo website at : https://devchitect.github.io/pizzeria-webstore/
 ## Pages:
 - Home
 - Menu
