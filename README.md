@@ -1,4 +1,5 @@
-# Online Sale Store for a Pizza Restaurant. (Front-End - made with AngularJS)
+# Online Sale Store for a Pizza Restaurant. 
+(" Front-End - made with AngularJS ")
 
 - View demo website at : https://devchitect.github.io/pizzeria-webstore/
 ## Pages:
